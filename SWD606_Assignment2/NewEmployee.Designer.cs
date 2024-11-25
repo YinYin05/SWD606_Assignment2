@@ -54,12 +54,12 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(501, 389);
+            btnCancel.Location = new Point(525, 389);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(94, 29);
-            btnCancel.TabIndex = 43;
+            btnCancel.Size = new Size(75, 29);
+            btnCancel.TabIndex = 0;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
@@ -69,6 +69,7 @@
             btnSave.TabIndex = 42;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // txtRole
             // 
@@ -260,6 +261,7 @@
             Controls.Add(label1);
             Name = "NewEmployee";
             Text = "NewEmployee";
+            Load += NewEmployee_Load;
             ResumeLayout(false);
             PerformLayout();
         }

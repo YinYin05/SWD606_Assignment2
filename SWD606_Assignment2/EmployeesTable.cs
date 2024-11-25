@@ -287,7 +287,9 @@ namespace SWD606_Assignment2
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-
+            // Create an instance of the NewEmployee form
+            NewEmployee newEmployeeForm = new NewEmployee();
+            newEmployeeForm.Show();
         }
     }
 }
