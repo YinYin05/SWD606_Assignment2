@@ -38,12 +38,16 @@
             labelLastName = new Label();
             labelPhone = new Label();
             labelHourlyRate = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // labelFirstName
             // 
             labelFirstName.AutoSize = true;
-            labelFirstName.Location = new Point(563, 91);
+            labelFirstName.Location = new Point(1018, 209);
             labelFirstName.Name = "labelFirstName";
             labelFirstName.Size = new Size(80, 20);
             labelFirstName.TabIndex = 0;
@@ -52,7 +56,7 @@
             // labelId
             // 
             labelId.AutoSize = true;
-            labelId.Location = new Point(563, 54);
+            labelId.Location = new Point(1018, 172);
             labelId.Name = "labelId";
             labelId.Size = new Size(29, 20);
             labelId.TabIndex = 5;
@@ -61,7 +65,7 @@
             // labelEmail
             // 
             labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(563, 199);
+            labelEmail.Location = new Point(1018, 317);
             labelEmail.Name = "labelEmail";
             labelEmail.Size = new Size(46, 20);
             labelEmail.TabIndex = 6;
@@ -70,7 +74,7 @@
             // labelRole
             // 
             labelRole.AutoSize = true;
-            labelRole.Location = new Point(563, 233);
+            labelRole.Location = new Point(1018, 351);
             labelRole.Name = "labelRole";
             labelRole.Size = new Size(42, 20);
             labelRole.TabIndex = 7;
@@ -79,7 +83,7 @@
             // labelLeaveStatus
             // 
             labelLeaveStatus.AutoSize = true;
-            labelLeaveStatus.Location = new Point(563, 312);
+            labelLeaveStatus.Location = new Point(1018, 430);
             labelLeaveStatus.Name = "labelLeaveStatus";
             labelLeaveStatus.Size = new Size(92, 20);
             labelLeaveStatus.TabIndex = 8;
@@ -87,7 +91,7 @@
             // 
             // buttonComplain
             // 
-            buttonComplain.Location = new Point(536, 346);
+            buttonComplain.Location = new Point(991, 464);
             buttonComplain.Name = "buttonComplain";
             buttonComplain.Size = new Size(149, 29);
             buttonComplain.TabIndex = 9;
@@ -98,7 +102,7 @@
             // labelAddress
             // 
             labelAddress.AutoSize = true;
-            labelAddress.Location = new Point(563, 262);
+            labelAddress.Location = new Point(1018, 380);
             labelAddress.Name = "labelAddress";
             labelAddress.Size = new Size(65, 20);
             labelAddress.TabIndex = 10;
@@ -107,7 +111,7 @@
             // labelLastName
             // 
             labelLastName.AutoSize = true;
-            labelLastName.Location = new Point(563, 131);
+            labelLastName.Location = new Point(1018, 249);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(79, 20);
             labelLastName.TabIndex = 11;
@@ -116,7 +120,7 @@
             // labelPhone
             // 
             labelPhone.AutoSize = true;
-            labelPhone.Location = new Point(563, 165);
+            labelPhone.Location = new Point(1018, 283);
             labelPhone.Name = "labelPhone";
             labelPhone.Size = new Size(53, 20);
             labelPhone.TabIndex = 12;
@@ -125,17 +129,57 @@
             // labelHourlyRate
             // 
             labelHourlyRate.AutoSize = true;
-            labelHourlyRate.Location = new Point(563, 292);
+            labelHourlyRate.Location = new Point(1018, 410);
             labelHourlyRate.Name = "labelHourlyRate";
             labelHourlyRate.Size = new Size(86, 20);
             labelHourlyRate.TabIndex = 13;
             labelHourlyRate.Text = "Hourly rate:";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(627, 197);
+            button1.Name = "button1";
+            button1.Size = new Size(135, 44);
+            button1.TabIndex = 14;
+            button1.Text = "Leave Status";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(476, 198);
+            button2.Name = "button2";
+            button2.Size = new Size(135, 43);
+            button2.TabIndex = 15;
+            button2.Text = "Payroll";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(476, 308);
+            button3.Name = "button3";
+            button3.Size = new Size(135, 44);
+            button3.TabIndex = 16;
+            button3.Text = "Offboarding";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(633, 301);
+            button4.Name = "button4";
+            button4.Size = new Size(129, 51);
+            button4.TabIndex = 17;
+            button4.Text = "Grievances";
+            button4.UseVisualStyleBackColor = true;
             // 
             // employeeDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1254, 597);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(labelHourlyRate);
             Controls.Add(labelPhone);
             Controls.Add(labelLastName);
@@ -165,5 +209,9 @@
         private Label labelLastName;
         private Label labelPhone;
         private Label labelHourlyRate;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }
