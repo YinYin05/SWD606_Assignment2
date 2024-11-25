@@ -39,7 +39,7 @@ namespace SWD606_Assignment2
         }
         void OpenConnection()
         {
-            connection = new SqlConnection(@"Data Source=ASDFGHJKL123\SQLEXPRESS;Initial Catalog=SWD606;Integrated Security=True;TrustServerCertificate=True");
+            connection = new SqlConnection(@"Data Source=MALAIKA\SQLEXPRESS;Initial Catalog=SWD606;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
             connection.Open();
         }
         private void GetInfo()
