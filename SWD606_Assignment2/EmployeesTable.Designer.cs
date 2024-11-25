@@ -1,6 +1,6 @@
 ﻿namespace SWD606_Assignment2
 {
-    partial class btnAddNewEmployee
+    partial class EmployeesTable
     {
         /// <summary>
         /// Required designer variable.
@@ -93,7 +93,7 @@
             btnAddEmployee.Text = "Add New Employee";
             btnAddEmployee.Click += btnAddEmployee_Click;
             // 
-            // btnAddNewEmployee
+            // EmployeesTable
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -104,8 +104,8 @@
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(label1);
-            Name = "btnAddNewEmployee";
-            Text = "EmployeesTable";
+            Name = "EmployeesTable";
+            Text = "Employees Table";
             Load += EmployeesTable_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

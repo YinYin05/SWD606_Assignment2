@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace SWD606_Assignment2
 {
-    public partial class btnAddNewEmployee : Form
+    public partial class EmployeesTable : Form
     {
 
-        public btnAddNewEmployee()
+        public EmployeesTable()
         {
             InitializeComponent();
         }
@@ -71,7 +72,12 @@ namespace SWD606_Assignment2
             try
             {
                 // connection string server
-                using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
+
                 {
                     con.Open();
 
@@ -189,7 +195,10 @@ namespace SWD606_Assignment2
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
                 {
                     con.Open();
 
@@ -242,7 +251,10 @@ namespace SWD606_Assignment2
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
                 {
                     con.Open();
 

@@ -38,7 +38,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(224, 98);
+            label1.Location = new Point(246, 111);
             label1.Name = "label1";
             label1.Size = new Size(53, 20);
             label1.TabIndex = 0;
@@ -46,14 +46,14 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(330, 91);
+            txtEmail.Location = new Point(352, 104);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(125, 27);
             txtEmail.TabIndex = 1;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(328, 196);
+            btnLogin.Location = new Point(350, 209);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(94, 29);
             btnLogin.TabIndex = 3;
@@ -63,7 +63,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(330, 134);
+            txtPassword.Location = new Point(352, 147);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(125, 27);
             txtPassword.TabIndex = 2;
@@ -71,7 +71,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(224, 141);
+            label2.Location = new Point(246, 154);
             label2.Name = "label2";
             label2.Size = new Size(77, 20);
             label2.TabIndex = 3;

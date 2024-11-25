@@ -71,7 +71,7 @@
             txtCompany.Location = new Point(191, 97);
             txtCompany.Name = "txtCompany";
             txtCompany.ReadOnly = true;
-            txtCompany.Size = new Size(125, 27);
+            txtCompany.Size = new Size(227, 27);
             txtCompany.TabIndex = 2;
             // 
             // panel1
@@ -92,6 +92,7 @@
             btnLeave.TabIndex = 2;
             btnLeave.Text = "Leave Management";
             btnLeave.UseVisualStyleBackColor = true;
+            btnLeave.Click += btnLeave_Click;
             // 
             // btnPayroll
             // 
@@ -138,7 +139,7 @@
             txtEmail.Location = new Point(191, 218);
             txtEmail.Name = "txtEmail";
             txtEmail.ReadOnly = true;
-            txtEmail.Size = new Size(125, 27);
+            txtEmail.Size = new Size(227, 27);
             txtEmail.TabIndex = 7;
             // 
             // label4
@@ -156,7 +157,7 @@
             txtPhoneNumber.Location = new Point(191, 262);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.ReadOnly = true;
-            txtPhoneNumber.Size = new Size(125, 27);
+            txtPhoneNumber.Size = new Size(227, 27);
             txtPhoneNumber.TabIndex = 9;
             // 
             // label5
@@ -217,7 +218,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "adminDashboard";
-            Text = "adminDashboard";
+            Text = "Admin Dashboard";
             Load += AdminDashboard_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);

@@ -167,7 +167,7 @@
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "PayrollTable";
-            Text = "PayrollTable";
+            Text = "Payroll Table";
             Load += PayrollTable_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

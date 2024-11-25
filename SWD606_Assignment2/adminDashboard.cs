@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace SWD606_Assignment2
 {
@@ -46,7 +47,10 @@ namespace SWD606_Assignment2
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
                 {
                     con.Open();
 
@@ -102,7 +106,10 @@ namespace SWD606_Assignment2
 
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source=JP_F15\\SQLEXPRESS;Initial Catalog=SWD606;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source=JP_F15\\SQLEXPRESS;Initial Catalog=SWD606;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
                 {
                     con.Open();
 
@@ -163,7 +170,7 @@ namespace SWD606_Assignment2
         private void btnEmployees_Click(object sender, EventArgs e)
         {
             // Create an instance of the EmployeesTable form
-            btnAddNewEmployee employeesTable = new btnAddNewEmployee();
+            EmployeesTable employeesTable = new EmployeesTable();
 
             // Show the EmployeesTable form
             employeesTable.Show();
@@ -176,6 +183,11 @@ namespace SWD606_Assignment2
 
             // Show the form
             payrollForm.Show();
+        }
+
+        private void btnLeave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

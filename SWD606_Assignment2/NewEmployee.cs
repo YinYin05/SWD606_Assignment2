@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace SWD606_Assignment2
 {
@@ -21,7 +22,10 @@ namespace SWD606_Assignment2
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
                 {
                     con.Open();
 
@@ -48,7 +52,10 @@ namespace SWD606_Assignment2
         {
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+
+                SqlConnection con = new SqlConnection(myConn);
                 {
                     con.Open();
 
