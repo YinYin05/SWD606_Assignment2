@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,19 +14,18 @@ namespace SWD606_Assignment2
 {
     public partial class employeeDashboard : Form
     {
-        string firstname;
-        string email;
-        string role;
+        string FirstName;
+        string Email;
+        string Role;
         int id;
-        string leavestatus;
-        string address;
-        string lastname;
-        string phone;
-        decimal hourlyrate;
+        string LeaveStatus;
+        string Address;
+        string LastName;
+        string Phone;
+        decimal HourlyRate;
 
-        SqlConnection connection;
         SqlCommand command;
-
+        SqlConnection connection;
         public employeeDashboard()
         {
             InitializeComponent();
@@ -39,19 +39,20 @@ namespace SWD606_Assignment2
         }
         void OpenConnection()
         {
-            connection = new SqlConnection(@"Data Source=ASDFGHJKL123\SQLEXPRESS;Initial Catalog=SWD606;Integrated Security=True;TrustServerCertificate=True");
+            string connectionstring = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
+            connection = new SqlConnection(connectionstring);
             connection.Open();
         }
         private void GetInfo()
         {
-            firstname = UserSession.Instance.FirstName;
-            labelFirstName.Text = "First name: " + firstname;
+            FirstName = UserSession.Instance.FirstName;
+            labelFirstName.Text = "First name: " + FirstName;
 
-            email = UserSession.Instance.Email;
-            labelEmail.Text = "Email: " + email;
+            Email = UserSession.Instance.Email;
+            labelEmail.Text = "Email: " + Email;
 
-            role = UserSession.Instance.Role;
-            labelRole.Text = "Role: " + role;
+            Role = UserSession.Instance.Role;
+            labelRole.Text = "Role: " + Role;
 
             id = UserSession.Instance.ID;
             labelId.Text = "Id: " + id.ToString();
@@ -59,28 +60,26 @@ namespace SWD606_Assignment2
             //leave status not yet implemented
             //leavestatus = UserSession.Instance.LeaveStatus;
             //labelLeaveStatus.Text = "Leave status: " + leavestatus;
-
-            string query = "Select Address from Employees where ID = " + id;
+           string query = "Select Address from Employees where ID = " + id;
             command = new SqlCommand(query, connection);
-            address = (string)command.ExecuteScalar();
-            labelAddress.Text = "Address: " + address;
+            Address = (string)command.ExecuteScalar();
+            labelAddress.Text = "Address: " + Address;
 
             query = "Select LastName from Employees where ID = " + id;
             command = new SqlCommand (query, connection);
-            lastname = (string)command.ExecuteScalar();
-            labelLastName.Text = "Last name: " + lastname;
+            LastName = (string)command.ExecuteScalar();
+            labelLastName.Text = "Last name: " + LastName;
 
             query = "Select Phone from Employees where ID = " + id;
             command = new SqlCommand(query, connection);
-            phone = (string)command.ExecuteScalar();
-            labelPhone.Text = "Phone: " + phone;
+            Phone = (string)command.ExecuteScalar();
+            labelPhone.Text = "Phone: " + Phone;
 
             query = "Select HourlyRate from Employees where ID = " + id;
             command = new SqlCommand(query, connection);
-            hourlyrate = (decimal)command.ExecuteScalar();
-            labelHourlyRate.Text = "Hourly rate: " + hourlyrate;
+            HourlyRate = (decimal)command.ExecuteScalar();
+            labelHourlyRate.Text = "Hourly rate: " + HourlyRate;
         }
-
         private void buttonComplain_Click(object sender, EventArgs e)
         {
             
