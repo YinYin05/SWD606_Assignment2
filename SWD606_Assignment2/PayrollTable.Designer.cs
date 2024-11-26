@@ -166,6 +166,9 @@
             Controls.Add(txtSearch);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "PayrollTable";
             Text = "Payroll Table";
             Load += PayrollTable_Load;

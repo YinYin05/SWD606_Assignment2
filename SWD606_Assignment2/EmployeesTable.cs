@@ -234,55 +234,60 @@ namespace SWD606_Assignment2
             // Get the input from the search textbox
             string searchText = txtSearch.Text.Trim();
 
-            // Check if the input is a valid integer
-            if (int.TryParse(searchText, out int searchValue))
+            if (!string.IsNullOrEmpty(searchText))
             {
-                // Proceed with searching using the integer value
-                SearchEmployeeById(searchValue);
+                // Perform the search by ID, FirstName, or LastName
+                SearchEmployee(searchText);
             }
             else
             {
-                // Inform the user that the input is not a valid integer
-                MessageBox.Show("Please enter a valid integer to search.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Inform the user if the search textbox is empty
+                MessageBox.Show("Please enter a value to search.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        // Method to perform the search and update DataGridView
-        private void SearchEmployeeById(int employeeId)
+
+        private void SearchEmployee(string searchText)
         {
             try
             {
-                //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
+                // Connection string
                 string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
-
                 SqlConnection con = new SqlConnection(myConn);
+
+                con.Open();
+
+                // SQL query to search by ID, FirstName, or LastName
+                string query = @"
+            SELECT * FROM Employees 
+            WHERE 
+                CAST(ID AS NVARCHAR) LIKE @SearchText OR 
+                FirstName LIKE @SearchText OR 
+                LastName LIKE @SearchText";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    con.Open();
+                    // Use a wildcard search
+                    cmd.Parameters.AddWithValue("@SearchText", $"%{searchText}%");
 
-                    // SQL query to search for the employee by ID
-                    string query = "SELECT * FROM Employees WHERE ID = @ID";
-
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
-                        cmd.Parameters.AddWithValue("@ID", employeeId);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
 
-                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        if (dt.Rows.Count > 0)
                         {
-                            DataTable dt = new DataTable();
-                            adapter.Fill(dt);
-
-                            if (dt.Rows.Count > 0)
-                            {
-                                // Display the filtered data
-                                dataGridView1.DataSource = dt;
-                            }
-                            else
-                            {
-                                // Inform the user if no match is found
-                                MessageBox.Show("No employee found with that ID.", "No Match", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
+                            // Display the filtered data
+                            dataGridView1.DataSource = dt;
+                        }
+                        else
+                        {
+                            // Inform the user if no match is found
+                            MessageBox.Show("No employees match the search criteria.", "No Match", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
+
+                con.Close();
             }
             catch (Exception ex)
             {

@@ -313,7 +313,14 @@ namespace SWD606_Assignment2
 
         private void btnResetFilter_Click(object sender, EventArgs e)
         {
+            // Reset the DateTimePickers to the current date
+            dateTimePickerFrom.Value = DateTime.Now;
+            dateTimePickerTo.Value = DateTime.Now;
+
             LoadPayrollData();
+
+            txtSearch.Clear();
+            txtSearch.Focus();
         }
     }
 }

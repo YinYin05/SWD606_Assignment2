@@ -87,6 +87,9 @@
             Controls.Add(btnLogin);
             Controls.Add(txtEmail);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
             Text = "Login";
             ResumeLayout(false);

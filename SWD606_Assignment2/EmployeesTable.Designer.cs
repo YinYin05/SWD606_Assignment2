@@ -42,15 +42,15 @@
             label1.AutoSize = true;
             label1.Location = new Point(36, 46);
             label1.Name = "label1";
-            label1.Size = new Size(124, 20);
+            label1.Size = new Size(98, 20);
             label1.TabIndex = 0;
-            label1.Text = "Input ID number :";
+            label1.Text = "Search Input :";
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(167, 43);
+            txtSearch.Location = new Point(140, 43);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(125, 27);
+            txtSearch.Size = new Size(152, 27);
             txtSearch.TabIndex = 1;
             // 
             // btnSearch
@@ -104,6 +104,9 @@
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "EmployeesTable";
             Text = "Employees Table";
             Load += EmployeesTable_Load;
