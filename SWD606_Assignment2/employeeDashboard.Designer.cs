@@ -28,190 +28,190 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelFirstName = new Label();
-            labelId = new Label();
-            labelEmail = new Label();
-            labelRole = new Label();
-            labelLeaveStatus = new Label();
-            buttonComplain = new Button();
-            labelAddress = new Label();
-            labelLastName = new Label();
-            labelPhone = new Label();
-            labelHourlyRate = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employeeDashboard));
+            pnlNav = new Panel();
+            infoBTN = new Button();
+            resignBTN = new Button();
+            grievancesBTN = new Button();
+            LeaveBTN = new Button();
+            PayrollBTN = new Button();
+            panel2 = new Panel();
+            labelFN = new Label();
+            profileIMG = new PictureBox();
+            PnlFormLoader = new Panel();
+            labelTitle = new Label();
+            pnlNav.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)profileIMG).BeginInit();
             SuspendLayout();
             // 
-            // labelFirstName
+            // pnlNav
             // 
-            labelFirstName.AutoSize = true;
-            labelFirstName.Location = new Point(1018, 209);
-            labelFirstName.Name = "labelFirstName";
-            labelFirstName.Size = new Size(80, 20);
-            labelFirstName.TabIndex = 0;
-            labelFirstName.Text = "First name:";
+            pnlNav.Controls.Add(infoBTN);
+            pnlNav.Controls.Add(resignBTN);
+            pnlNav.Controls.Add(grievancesBTN);
+            pnlNav.Controls.Add(LeaveBTN);
+            pnlNav.Controls.Add(PayrollBTN);
+            pnlNav.Controls.Add(panel2);
+            pnlNav.Dock = DockStyle.Left;
+            pnlNav.Location = new Point(0, 0);
+            pnlNav.Name = "pnlNav";
+            pnlNav.Size = new Size(186, 597);
+            pnlNav.TabIndex = 0;
             // 
-            // labelId
+            // infoBTN
             // 
-            labelId.AutoSize = true;
-            labelId.Location = new Point(1018, 172);
-            labelId.Name = "labelId";
-            labelId.Size = new Size(29, 20);
-            labelId.TabIndex = 5;
-            labelId.Text = "Id: ";
+            infoBTN.Dock = DockStyle.Bottom;
+            infoBTN.FlatAppearance.BorderSize = 0;
+            infoBTN.FlatStyle = FlatStyle.Flat;
+            infoBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            infoBTN.Location = new Point(0, 555);
+            infoBTN.Name = "infoBTN";
+            infoBTN.Size = new Size(186, 42);
+            infoBTN.TabIndex = 2;
+            infoBTN.Text = "Account Information";
+            infoBTN.UseVisualStyleBackColor = true;
+            infoBTN.Click += infoBTN_Click;
+            infoBTN.Leave += infoBTN_Click;
             // 
-            // labelEmail
+            // resignBTN
             // 
-            labelEmail.AutoSize = true;
-            labelEmail.Location = new Point(1018, 317);
-            labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(46, 20);
-            labelEmail.TabIndex = 6;
-            labelEmail.Text = "Email";
+            resignBTN.FlatAppearance.BorderSize = 0;
+            resignBTN.FlatStyle = FlatStyle.Flat;
+            resignBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            resignBTN.Location = new Point(0, 507);
+            resignBTN.Name = "resignBTN";
+            resignBTN.Size = new Size(186, 42);
+            resignBTN.TabIndex = 4;
+            resignBTN.Text = "Off Boarding";
+            resignBTN.UseVisualStyleBackColor = true;
+            resignBTN.Click += resignBTN_Click;
+            resignBTN.Leave += resignBTN_Click;
             // 
-            // labelRole
+            // grievancesBTN
             // 
-            labelRole.AutoSize = true;
-            labelRole.Location = new Point(1018, 351);
-            labelRole.Name = "labelRole";
-            labelRole.Size = new Size(42, 20);
-            labelRole.TabIndex = 7;
-            labelRole.Text = "Role:";
+            grievancesBTN.Dock = DockStyle.Top;
+            grievancesBTN.FlatAppearance.BorderSize = 0;
+            grievancesBTN.FlatStyle = FlatStyle.Flat;
+            grievancesBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            grievancesBTN.Location = new Point(0, 228);
+            grievancesBTN.Name = "grievancesBTN";
+            grievancesBTN.Size = new Size(186, 42);
+            grievancesBTN.TabIndex = 3;
+            grievancesBTN.Text = "Voice Grievances";
+            grievancesBTN.UseVisualStyleBackColor = true;
+            grievancesBTN.Click += grievancesBTN_Click;
+            grievancesBTN.Leave += grievancesBTN_Click;
             // 
-            // labelLeaveStatus
+            // LeaveBTN
             // 
-            labelLeaveStatus.AutoSize = true;
-            labelLeaveStatus.Location = new Point(1018, 430);
-            labelLeaveStatus.Name = "labelLeaveStatus";
-            labelLeaveStatus.Size = new Size(92, 20);
-            labelLeaveStatus.TabIndex = 8;
-            labelLeaveStatus.Text = "Leave status:";
+            LeaveBTN.Dock = DockStyle.Top;
+            LeaveBTN.FlatAppearance.BorderSize = 0;
+            LeaveBTN.FlatStyle = FlatStyle.Flat;
+            LeaveBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LeaveBTN.Location = new Point(0, 186);
+            LeaveBTN.Name = "LeaveBTN";
+            LeaveBTN.Size = new Size(186, 42);
+            LeaveBTN.TabIndex = 2;
+            LeaveBTN.Text = "Request Leave";
+            LeaveBTN.UseVisualStyleBackColor = true;
+            LeaveBTN.Click += LeaveBTN_Click;
+            LeaveBTN.Leave += LeaveBTN_Click;
             // 
-            // buttonComplain
+            // PayrollBTN
             // 
-            buttonComplain.Location = new Point(991, 464);
-            buttonComplain.Name = "buttonComplain";
-            buttonComplain.Size = new Size(149, 29);
-            buttonComplain.TabIndex = 9;
-            buttonComplain.Text = "Voice grievances";
-            buttonComplain.UseVisualStyleBackColor = true;
-            buttonComplain.Click += buttonComplain_Click;
+            PayrollBTN.Dock = DockStyle.Top;
+            PayrollBTN.FlatAppearance.BorderSize = 0;
+            PayrollBTN.FlatStyle = FlatStyle.Flat;
+            PayrollBTN.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PayrollBTN.Location = new Point(0, 144);
+            PayrollBTN.Name = "PayrollBTN";
+            PayrollBTN.Size = new Size(186, 42);
+            PayrollBTN.TabIndex = 1;
+            PayrollBTN.Text = "Salary Details";
+            PayrollBTN.UseVisualStyleBackColor = true;
+            PayrollBTN.Click += PayrollBTN_Click;
+            PayrollBTN.Leave += PayrollBTN_Click;
             // 
-            // labelAddress
+            // panel2
             // 
-            labelAddress.AutoSize = true;
-            labelAddress.Location = new Point(1018, 380);
-            labelAddress.Name = "labelAddress";
-            labelAddress.Size = new Size(65, 20);
-            labelAddress.TabIndex = 10;
-            labelAddress.Text = "Address:";
+            panel2.Controls.Add(labelFN);
+            panel2.Controls.Add(profileIMG);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(186, 144);
+            panel2.TabIndex = 0;
             // 
-            // labelLastName
+            // labelFN
             // 
-            labelLastName.AutoSize = true;
-            labelLastName.Location = new Point(1018, 249);
-            labelLastName.Name = "labelLastName";
-            labelLastName.Size = new Size(79, 20);
-            labelLastName.TabIndex = 11;
-            labelLastName.Text = "Last name:";
+            labelFN.AutoSize = true;
+            labelFN.Location = new Point(66, 102);
+            labelFN.Name = "labelFN";
+            labelFN.Size = new Size(50, 20);
+            labelFN.TabIndex = 1;
+            labelFN.Text = "label1";
+            labelFN.Click += label1_Click;
             // 
-            // labelPhone
+            // profileIMG
             // 
-            labelPhone.AutoSize = true;
-            labelPhone.Location = new Point(1018, 283);
-            labelPhone.Name = "labelPhone";
-            labelPhone.Size = new Size(53, 20);
-            labelPhone.TabIndex = 12;
-            labelPhone.Text = "Phone:";
+            profileIMG.Image = (Image)resources.GetObject("profileIMG.Image");
+            profileIMG.Location = new Point(60, 22);
+            profileIMG.Name = "profileIMG";
+            profileIMG.Size = new Size(63, 63);
+            profileIMG.SizeMode = PictureBoxSizeMode.Zoom;
+            profileIMG.TabIndex = 0;
+            profileIMG.TabStop = false;
             // 
-            // labelHourlyRate
+            // PnlFormLoader
             // 
-            labelHourlyRate.AutoSize = true;
-            labelHourlyRate.Location = new Point(1018, 410);
-            labelHourlyRate.Name = "labelHourlyRate";
-            labelHourlyRate.Size = new Size(86, 20);
-            labelHourlyRate.TabIndex = 13;
-            labelHourlyRate.Text = "Hourly rate:";
+            PnlFormLoader.Dock = DockStyle.Bottom;
+            PnlFormLoader.Location = new Point(186, 120);
+            PnlFormLoader.Name = "PnlFormLoader";
+            PnlFormLoader.Size = new Size(1068, 477);
+            PnlFormLoader.TabIndex = 1;
             // 
-            // button1
+            // labelTitle
             // 
-            button1.Location = new Point(627, 197);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 44);
-            button1.TabIndex = 14;
-            button1.Text = "Leave Status";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(476, 198);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 43);
-            button2.TabIndex = 15;
-            button2.Text = "Payroll";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(476, 308);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 44);
-            button3.TabIndex = 16;
-            button3.Text = "Offboarding";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(633, 301);
-            button4.Name = "button4";
-            button4.Size = new Size(129, 51);
-            button4.TabIndex = 17;
-            button4.Text = "Grievances";
-            button4.UseVisualStyleBackColor = true;
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTitle.Location = new Point(215, 37);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(140, 54);
+            labelTitle.TabIndex = 2;
+            labelTitle.Text = "Payroll";
             // 
             // employeeDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1254, 597);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(labelHourlyRate);
-            Controls.Add(labelPhone);
-            Controls.Add(labelLastName);
-            Controls.Add(labelAddress);
-            Controls.Add(buttonComplain);
-            Controls.Add(labelLeaveStatus);
-            Controls.Add(labelRole);
-            Controls.Add(labelEmail);
-            Controls.Add(labelId);
-            Controls.Add(labelFirstName);
+            Controls.Add(labelTitle);
+            Controls.Add(PnlFormLoader);
+            Controls.Add(pnlNav);
             Name = "employeeDashboard";
             Text = "employeeDashboard";
             Load += employeeDashboard_Load;
+            pnlNav.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)profileIMG).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label labelFirstName;
-        private Label labelId;
-        private Label labelEmail;
-        private Label labelRole;
-        private Label labelLeaveStatus;
-        private Button buttonComplain;
-        private Label labelAddress;
-        private Label labelLastName;
-        private Label labelPhone;
-        private Label labelHourlyRate;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Panel pnlNav;
+        private Panel panel2;
+        private Label labelFN;
+        private PictureBox profileIMG;
+        private Button PayrollBTN;
+        private Button infoBTN;
+        private Button resignBTN;
+        private Button grievancesBTN;
+        private Button LeaveBTN;
+        private Panel PnlFormLoader;
+        private Label labelTitle;
     }
 }

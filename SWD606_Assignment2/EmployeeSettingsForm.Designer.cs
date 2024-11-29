@@ -1,6 +1,6 @@
 ﻿namespace SWD606_Assignment2
 {
-    partial class GrievancesForm
+    partial class EmployeeSettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,46 +29,26 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(87, 70);
+            label1.Location = new Point(225, 159);
             label1.Name = "label1";
-            label1.Size = new Size(54, 20);
+            label1.Size = new Size(145, 20);
             label1.TabIndex = 0;
-            label1.Text = "Report";
+            label1.Text = "Account information";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(87, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(712, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(352, 378);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 39);
-            button1.TabIndex = 2;
-            button1.Text = "Voice Grievance";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // GrievancesForm
+            // EmployeeSettingsForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(715, 430);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "GrievancesForm";
-            Text = "GrievancesForm";
+            Name = "EmployeeSettingsForm";
+            Text = "EmployeeSettingsForm";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -76,7 +56,5 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private Button button1;
     }
 }

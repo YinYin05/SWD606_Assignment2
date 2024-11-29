@@ -60,7 +60,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(328, 119);
+            button2.Location = new Point(357, 120);
             button2.Name = "button2";
             button2.Size = new Size(229, 36);
             button2.TabIndex = 2;
@@ -120,18 +120,18 @@
             // 
             // button3
             // 
-            button3.Location = new Point(419, 423);
+            button3.Location = new Point(419, 434);
             button3.Name = "button3";
-            button3.Size = new Size(94, 29);
+            button3.Size = new Size(167, 29);
             button3.TabIndex = 10;
-            button3.Text = "Save";
+            button3.Text = "Apply Leave";
             button3.UseVisualStyleBackColor = true;
             // 
             // LeaveForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(941, 493);
+            ClientSize = new Size(715, 430);
             Controls.Add(button3);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
@@ -142,6 +142,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LeaveForm";
             Text = "LeaveForm";
             ResumeLayout(false);
