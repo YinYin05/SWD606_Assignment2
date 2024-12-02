@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SWD606_Assignment2
 {
-    public partial class LeaveForm : Form
+    public partial class AccountInformation : Form
     {
-        public LeaveForm()
+        public AccountInformation()
         {
             InitializeComponent();
-        }
-
-        private void LeaveForm_Load(object sender, EventArgs e)
-        {
-/*            domainUpDown1.Items.Add("Test1");
-            domainUpDown1.Items.Add("Test2");*/
         }
     }
 }
