@@ -118,13 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label2.Text" xml:space="preserve">
-    <value>Please be advised that undersigned hereby tenders this resignation, effective immediately. Please acknowledge receipt and acceptance of this resignation. 
+    <value>Employees who wish to resign from their position at RECA  are required to submit their resignation notice at least two (2) weeks prior to their intended last working day. This notice period is necessary to:
 
-Thank you for your cooperation. 
-
-Very truly yours, 
-
-RECA's Company
+Allow sufficient time for the handover of duties.
+Provide the company an opportunity to begin the process of finding a suitable replacement.
+Ensure a seamless transition of responsibilities.
 </value>
   </data>
 </root>
