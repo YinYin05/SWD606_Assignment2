@@ -106,7 +106,6 @@ namespace SWD606_Assignment2
 
             try
             {
-                //using (SqlConnection con = new SqlConnection("Data Source=JP_F15\\SQLEXPRESS;Initial Catalog=SWD606;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"))
                 string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
 
                 SqlConnection con = new SqlConnection(myConn);
@@ -187,7 +186,11 @@ namespace SWD606_Assignment2
 
         private void btnLeave_Click(object sender, EventArgs e)
         {
+            // Create an instance of the LeaveManagement form
+            LeaveManagement leaveForm = new LeaveManagement();
 
+            // Show the form
+            leaveForm.Show(); 
         }
     }
 }
