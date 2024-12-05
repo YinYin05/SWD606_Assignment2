@@ -170,6 +170,7 @@
             PnlFormLoader.Name = "PnlFormLoader";
             PnlFormLoader.Size = new Size(1068, 477);
             PnlFormLoader.TabIndex = 1;
+            PnlFormLoader.Paint += PnlFormLoader_Paint;
             // 
             // labelTitle
             // 

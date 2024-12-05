@@ -32,8 +32,8 @@ namespace SWD606_Assignment2
         private EmployeeSettingsForm settingsForm_Vrb;
         private ResignationForm resignationForm_Vrb;
         private GrievancesForm grievancesForm_Vrb;
-        private LeaveForm leaveForm_Vrb;
-        private PayrollForm payrollForm_Vrb; 
+        public LeaveForm leaveForm_Vrb;
+        private PayrollForm payrollForm_Vrb;
 
         public employeeDashboard()
         {
@@ -42,7 +42,7 @@ namespace SWD606_Assignment2
             pnlNav.Top = PayrollBTN.Top;
             pnlNav.Left = PayrollBTN.Left;
 
-           
+
         }
         private void employeeDashboard_Load(object sender, EventArgs e)
         {
@@ -71,7 +71,7 @@ namespace SWD606_Assignment2
             GetInfo();
         }
 
-       // ----------- Payroll form ------------
+        // ----------- Payroll form ------------
         private void PayrollBTN_Click(object sender, EventArgs e)
         {
             pnlNav.Height = PayrollBTN.Height;
@@ -166,7 +166,7 @@ namespace SWD606_Assignment2
 
 
         // ----------- Resignation Form -------------
-        
+
         private void resignBTN_Click(object sender, EventArgs e)
         {
             pnlNav.Height = resignBTN.Height;
@@ -198,7 +198,7 @@ namespace SWD606_Assignment2
         }
 
         // ----------- User Information Form --------------
-        
+
         private void infoBTN_Click(object sender, EventArgs e)
         {
             pnlNav.Height = infoBTN.Height;
@@ -227,6 +227,11 @@ namespace SWD606_Assignment2
 
             PnlFormLoader.Controls.Add(settingsForm_Vrb);
             settingsForm_Vrb.Show();
+        }
+
+        private void PnlFormLoader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
