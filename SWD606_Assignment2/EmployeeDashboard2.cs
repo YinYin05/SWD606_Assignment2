@@ -35,6 +35,22 @@ namespace SWD606_Assignment2
         {
             FirstName = UserSession.Instance.FirstName;
             labelFN.Text = "Hello " + FirstName;
+
+            // Role-specific behavior
+            string role = UserSession.Instance.Role;
+
+            if (role == "Manager")
+            {
+                // Enable and show the manager-specific button
+                btnLeaveApprovals.Enabled = true;
+                btnLeaveApprovals.Visible = true;
+            }
+            else if (role == "Employee")
+            {
+                // Disable and hide the manager-specific button
+                btnLeaveApprovals.Enabled = false;
+                btnLeaveApprovals.Visible = false;
+            }
         }
         private void openchildform(Form childform)
         {
@@ -80,6 +96,12 @@ namespace SWD606_Assignment2
         private void AccountInformationButton_Click(object sender, EventArgs e)
         {
             openchildform(new AccountInformation());
+        }
+
+        private void btnLeaveApprovals_Click(object sender, EventArgs e)
+        {
+            // Add manager-specific functionality here
+            MessageBox.Show("Manager-specific feature coming soon!", "Manager Feature", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

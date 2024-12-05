@@ -38,12 +38,14 @@
             labelFN = new Label();
             profileIMG = new PictureBox();
             panel2 = new Panel();
+            btnLeaveApprovals = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profileIMG).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnLeaveApprovals);
             panel1.Controls.Add(AccountInformationButton);
             panel1.Controls.Add(OffBoardingButton);
             panel1.Controls.Add(VoiceGrievancesButton);
@@ -149,6 +151,19 @@
             panel2.Size = new Size(1068, 597);
             panel2.TabIndex = 1;
             // 
+            // btnLeaveApprovals
+            // 
+            btnLeaveApprovals.FlatAppearance.BorderSize = 0;
+            btnLeaveApprovals.FlatStyle = FlatStyle.Flat;
+            btnLeaveApprovals.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLeaveApprovals.Location = new Point(0, 277);
+            btnLeaveApprovals.Name = "btnLeaveApprovals";
+            btnLeaveApprovals.Size = new Size(186, 42);
+            btnLeaveApprovals.TabIndex = 9;
+            btnLeaveApprovals.Text = "Leave Approvals";
+            btnLeaveApprovals.UseVisualStyleBackColor = true;
+            btnLeaveApprovals.Click += btnLeaveApprovals_Click;
+            // 
             // EmployeeDashboard2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -176,5 +191,6 @@
         private Button AccountInformationButton;
         private Button OffBoardingButton;
         private Panel panel2;
+        private Button btnLeaveApprovals;
     }
 }

@@ -63,12 +63,19 @@ namespace SWD606_Assignment2
                                     }
                                     else if (Role == "Employee")
                                     {
-/*                                        employeeDashboard employeeDashboard = new employeeDashboard();
+                                        /*employeeDashboard employeeDashboard = new employeeDashboard();
                                         employeeDashboard.Show();*/
                                         EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
                                         employeeDashboard2.Show();
                                     }
-                                    else
+                                    else if (Role == "Manager")
+                                    {
+                                        // For Manager, load EmployeeDashboard2 with additional features
+                                        EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
+                                        employeeDashboard2.Show();
+                                    }
+
+                                else
                                     {
                                     MessageBox.Show("Unknown role. Please contact the administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return;
