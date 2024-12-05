@@ -221,7 +221,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "adminDashboard";
-            Text = "chat";
+            Text = "Admin Dashboard";
             Load += AdminDashboard_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
