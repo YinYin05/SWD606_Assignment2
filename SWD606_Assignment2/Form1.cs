@@ -63,10 +63,8 @@ namespace SWD606_Assignment2
                                     }
                                     else if (Role == "Employee")
                                     {
-/*                                        employeeDashboard employeeDashboard = new employeeDashboard();
-                                        employeeDashboard.Show();*/
-                                        EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
-                                        employeeDashboard2.Show();
+                                        employeeDashboard employeeDashboard = new employeeDashboard();
+                                        employeeDashboard.Show();
                                     }
                                     else
                                     {

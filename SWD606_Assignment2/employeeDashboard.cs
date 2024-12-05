@@ -105,8 +105,6 @@ namespace SWD606_Assignment2
         // ---------- Leave Form -------------
         private void LeaveBTN_Click(object sender, EventArgs e)
         {
-            //System.ObjectDisposedException: 'Cannot access a disposed object.
-            //Object name: 'System.Windows.Forms.UpDownBase+UpDownButtons'.'
             pnlNav.Height = LeaveBTN.Height;
             pnlNav.Top = LeaveBTN.Top;
             pnlNav.Left = LeaveBTN.Left;

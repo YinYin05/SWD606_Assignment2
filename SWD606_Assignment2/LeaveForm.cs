@@ -16,11 +16,5 @@ namespace SWD606_Assignment2
         {
             InitializeComponent();
         }
-
-        private void LeaveForm_Load(object sender, EventArgs e)
-        {
-/*            domainUpDown1.Items.Add("Test1");
-            domainUpDown1.Items.Add("Test2");*/
-        }
     }
 }
