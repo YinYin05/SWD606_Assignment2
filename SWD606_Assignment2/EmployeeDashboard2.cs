@@ -100,8 +100,11 @@ namespace SWD606_Assignment2
 
         private void btnLeaveApprovals_Click(object sender, EventArgs e)
         {
-            // Add manager-specific functionality here
-            MessageBox.Show("Manager-specific feature coming soon!", "Manager Feature", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Create an instance of the LeaveManagement form
+            LeaveApprovals leaveApprovals = new LeaveApprovals();
+
+            // Show the form
+            leaveApprovals.Show();
         }
     }
 }
