@@ -187,7 +187,11 @@ namespace SWD606_Assignment2
 
         private void btnLeave_Click(object sender, EventArgs e)
         {
+            // Create an instance of the LeaveManagement form
+            LeaveManagement leaveForm = new LeaveManagement();
 
+            // Show the form
+            leaveForm.Show();
         }
     }
 }
