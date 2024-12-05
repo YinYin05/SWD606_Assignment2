@@ -36,7 +36,7 @@ namespace SWD606_Assignment2
                     con.Open();
 
                     // Query to check the email and password, and get employee details
-                    string query = "SELECT ID, FirstName, Email, Role FROM Employees WHERE Email = @Email AND Password = @Password";
+                    string query = "SELECT ID, FirstName, LastName, Email, Role FROM Employees WHERE Email = @Email AND Password = @Password";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
@@ -49,11 +49,12 @@ namespace SWD606_Assignment2
                                 // Retrieve the employee details
                                 int ID = Convert.ToInt32(reader["ID"]);
                                 string FirstName = reader["FirstName"].ToString();
+                                string LastName = reader["LastName"].ToString();
                                 string Email = reader["Email"].ToString();
                                 string Role = reader["Role"].ToString();
 
                                 // Set the user data in the UserSession singleton
-                                UserSession.Instance.SetUserData(ID, FirstName, Email, Role);
+                                UserSession.Instance.SetUserData(ID, FirstName, LastName, Email, Role);
 
                                 // Navigate based on role
                                 if (Role == "Admin")
@@ -63,10 +64,19 @@ namespace SWD606_Assignment2
                                     }
                                     else if (Role == "Employee")
                                     {
-                                        employeeDashboard employeeDashboard = new employeeDashboard();
-                                        employeeDashboard.Show();
+                                        /*employeeDashboard employeeDashboard = new employeeDashboard();
+                                        employeeDashboard.Show();*/
+                                        EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
+                                        employeeDashboard2.Show();
                                     }
-                                    else
+                                    else if (Role == "Manager")
+                                    {
+                                        // For Manager, load EmployeeDashboard2 with additional features
+                                        EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
+                                        employeeDashboard2.Show();
+                                    }
+
+                                else
                                     {
                                     MessageBox.Show("Unknown role. Please contact the administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return;
@@ -96,6 +106,7 @@ namespace SWD606_Assignment2
         // Properties to hold user details
         public int ID { get; private set; }
         public string FirstName { get; private set; }
+        public string LastName { get; private set; }
         public string Email { get; private set; }
         public string Role { get; private set; }
 
@@ -116,10 +127,11 @@ namespace SWD606_Assignment2
         }
 
         // Method to set user data upon successful login
-        public void SetUserData(int id, string firstName, string email, string role)
+        public void SetUserData(int id, string firstName, string lastName, string email, string role)
         {
             ID = id;
             FirstName = firstName;
+            LastName = lastName;
             Email = email;
             Role = role;
         }

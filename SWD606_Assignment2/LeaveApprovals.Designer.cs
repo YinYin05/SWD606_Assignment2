@@ -1,6 +1,6 @@
 ﻿namespace SWD606_Assignment2
 {
-    partial class LeaveForm
+    partial class LeaveApprovals
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            dgvLeaveApprovals = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvLeaveApprovals).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // dgvLeaveApprovals
             // 
-            button1.Location = new Point(410, 169);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            dgvLeaveApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLeaveApprovals.Location = new Point(40, 94);
+            dgvLeaveApprovals.Name = "dgvLeaveApprovals";
+            dgvLeaveApprovals.RowHeadersWidth = 51;
+            dgvLeaveApprovals.Size = new Size(1744, 527);
+            dgvLeaveApprovals.TabIndex = 0;
             // 
-            // LeaveForm
+            // LeaveApprovals
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 430);
-            Controls.Add(button1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "LeaveForm";
-            Text = "LeaveForm";
-            Load += LeaveForm_Load;
+            ClientSize = new Size(1829, 653);
+            Controls.Add(dgvLeaveApprovals);
+            Name = "LeaveApprovals";
+            Text = "LeaveApprovals";
+            Load += LeaveApprovals_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvLeaveApprovals).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private DataGridView dgvLeaveApprovals;
     }
 }

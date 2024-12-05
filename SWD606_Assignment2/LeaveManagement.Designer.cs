@@ -1,6 +1,6 @@
 ﻿namespace SWD606_Assignment2
 {
-    partial class LeaveForm
+    partial class LeaveManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // dataGridView1
             // 
-            button1.Location = new Point(410, 169);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 135);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(755, 188);
+            dataGridView1.TabIndex = 0;
             // 
-            // LeaveForm
+            // LeaveManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(715, 430);
-            Controls.Add(button1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "LeaveForm";
-            Text = "LeaveForm";
-            Load += LeaveForm_Load;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
+            Name = "LeaveManagement";
+            Text = "LeaveManagement";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private DataGridView dataGridView1;
     }
 }

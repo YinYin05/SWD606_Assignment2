@@ -1,6 +1,6 @@
 ﻿namespace SWD606_Assignment2
 {
-    partial class GrievancesForm
+    partial class VoiceGrievances
     {
         /// <summary>
         /// Required designer variable.
@@ -28,55 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
             button1 = new Button();
+            textBox1 = new TextBox();
+            label1 = new Label();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(316, 169);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 0;
+            button1.Text = "Submit";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(301, 114);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(87, 70);
+            label1.Location = new Point(188, 121);
             label1.Name = "label1";
-            label1.Size = new Size(54, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Report";
+            label1.Size = new Size(74, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Grievance";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(87, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(712, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(352, 378);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 39);
-            button1.TabIndex = 2;
-            button1.Text = "Voice Grievance";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // GrievancesForm
+            // VoiceGrievances
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(851, 430);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "GrievancesForm";
-            Text = "GrievancesForm";
+            Controls.Add(textBox1);
+            Controls.Add(button1);
+            Name = "VoiceGrievances";
+            Text = "VoiceGrievances";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
         private Button button1;
+        private TextBox textBox1;
+        private Label label1;
     }
 }

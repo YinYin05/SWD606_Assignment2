@@ -1,6 +1,6 @@
 ﻿namespace SWD606_Assignment2
 {
-    partial class GrievancesForm
+    partial class SalaryDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -29,46 +29,47 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(87, 70);
+            label1.Location = new Point(131, 15);
             label1.Name = "label1";
-            label1.Size = new Size(54, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Report";
+            label1.Size = new Size(53, 20);
+            label1.TabIndex = 5;
+            label1.Text = "Payroll";
             // 
-            // textBox1
+            // dateTimePicker1
             // 
-            textBox1.Location = new Point(87, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(712, 27);
-            textBox1.TabIndex = 1;
+            dateTimePicker1.Location = new Point(271, 112);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.TabIndex = 4;
             // 
-            // button1
+            // dataGridView1
             // 
-            button1.Location = new Point(352, 378);
-            button1.Name = "button1";
-            button1.Size = new Size(163, 39);
-            button1.TabIndex = 2;
-            button1.Text = "Voice Grievance";
-            button1.UseVisualStyleBackColor = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(66, 168);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(668, 267);
+            dataGridView1.TabIndex = 3;
             // 
-            // GrievancesForm
+            // SalaryDetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(851, 430);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "GrievancesForm";
-            Text = "GrievancesForm";
+            Controls.Add(dateTimePicker1);
+            Controls.Add(dataGridView1);
+            Name = "SalaryDetails";
+            Text = "SalaryDetails";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -76,7 +77,7 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private Button button1;
+        private DateTimePicker dateTimePicker1;
+        private DataGridView dataGridView1;
     }
 }
