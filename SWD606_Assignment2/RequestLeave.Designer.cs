@@ -184,7 +184,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "RequestLeave";
-            Text = "RequestLeave";
+            Text = "Request Leave";
             Load += RequestLeave_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -14,6 +14,8 @@ namespace SWD606_Assignment2
 {
     public partial class LeaveApprovals : Form
     {
+        private DataTable leaveDataTable; // Holds the leave approvals data
+
         public LeaveApprovals()
         {
             InitializeComponent();
@@ -46,9 +48,24 @@ namespace SWD606_Assignment2
             dgvLeaveApprovals.CellFormatting += DgvLeaveApprovals_CellFormatting;
             // Event handler for button clicks
             dgvLeaveApprovals.CellContentClick += DgvLeaveApprovals_CellContentClick;
+
+            // Add values to search combo box
+            cmbSearch.Items.AddRange(new string[] { "ID", "First Name", "Last Name", "Start Date" });
+            // Do not set a default selection for cmbSearch
+            cmbSearch.SelectedIndex = -1; // No selection by default
+
+            // Add values to sort combo box
+            cmbSortBy.Items.AddRange(new string[] { "Start Date", "Leave Type", "Status" });
+
+            // Do not set a default selection for cmbSortBy
+            cmbSortBy.SelectedIndex = -1; // No selection by default
+
+            // Attach events
+            btnSearch.Click += btnSearch_Click;
+            cmbSortBy.SelectedIndexChanged += cmbSortBy_SelectedIndexChanged;
         }
-        // Method to load leave requests from the database
-        // Adjust the SQL query to include AID
+
+        // Method to load leave requests from the database        
         private void LoadLeaveApprovals()
         {
             try
@@ -74,13 +91,9 @@ namespace SWD606_Assignment2
                     {
                         // Data adapter to fill the DataTable
                         SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
-                        DataTable dataTable = new DataTable();
-
-                        // Fill the DataTable with data
-                        dataAdapter.Fill(dataTable);
-
-                        // Bind the DataTable to the DataGridView
-                        dgvLeaveApprovals.DataSource = dataTable;
+                        leaveDataTable = new DataTable(); // Initialize class-level leaveDataTable
+                        dataAdapter.Fill(leaveDataTable);
+                        dgvLeaveApprovals.DataSource = leaveDataTable; // Bind DataTable to DataGridView
                     }
                 }
             }
@@ -210,37 +223,153 @@ namespace SWD606_Assignment2
         }
         private void DgvLeaveApprovals_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.RowIndex >= 0 && (e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index || e.ColumnIndex == dgvLeaveApprovals.Columns["Reject"].Index))
+            if (e.RowIndex >= 0 && dgvLeaveApprovals.Columns.Contains("Approve") && dgvLeaveApprovals.Columns.Contains("Reject"))
             {
-                e.Handled = true; // Indicate that the painting is handled
-                e.PaintBackground(e.ClipBounds, true); // Paint the background
-
-                // Set the button colors
-                Color buttonColor = e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index ? Color.LightGreen : Color.LightCoral;
-
-                // Draw the button background
-                using (Brush brush = new SolidBrush(buttonColor))
+                if (e.RowIndex >= 0 && (e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index || e.ColumnIndex == dgvLeaveApprovals.Columns["Reject"].Index))
                 {
-                    e.Graphics.FillRectangle(brush, e.CellBounds);
-                }
+                    e.Handled = true; // Indicate that the painting is handled
+                    e.PaintBackground(e.ClipBounds, true); // Paint the background
 
-                // Draw the button text
-                string buttonText = e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index ? "Approve" : "Reject";
-                TextRenderer.DrawText(
-                    e.Graphics,
-                    buttonText,
-                    dgvLeaveApprovals.Font,
-                    e.CellBounds,
-                    Color.Black, // Text color
-                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                    // Set the button colors
+                    Color buttonColor = e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index ? Color.LightGreen : Color.LightCoral;
 
-                // Draw the border manually
-                using (Pen pen = new Pen(dgvLeaveApprovals.GridColor))
-                {
-                    e.Graphics.DrawRectangle(pen, new Rectangle(e.CellBounds.Left, e.CellBounds.Top, e.CellBounds.Width - 1, e.CellBounds.Height - 1));
+                    // Draw the button background
+                    using (Brush brush = new SolidBrush(buttonColor))
+                    {
+                        e.Graphics.FillRectangle(brush, e.CellBounds);
+                    }
+
+                    // Draw the button text
+                    string buttonText = e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index ? "Approve" : "Reject";
+                    TextRenderer.DrawText(
+                        e.Graphics,
+                        buttonText,
+                        dgvLeaveApprovals.Font,
+                        e.CellBounds,
+                        Color.Black, // Text color
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                    // Draw the border manually
+                    using (Pen pen = new Pen(dgvLeaveApprovals.GridColor))
+                    {
+                        e.Graphics.DrawRectangle(pen, new Rectangle(e.CellBounds.Left, e.CellBounds.Top, e.CellBounds.Width - 1, e.CellBounds.Height - 1));
+                    }
                 }
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (cmbSearch.SelectedIndex == -1) // No item selected
+            {
+                MessageBox.Show("Please select a search field.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return; // Exit without performing search
+            }
+
+            string searchColumn = cmbSearch.SelectedItem.ToString();
+            string searchText = txtSearch.Text.Trim();
+
+            try
+            {
+                // Convert column name to match database field names
+                string columnName = searchColumn switch
+                {
+                    "ID" => "ID",
+                    "First Name" => "FirstName",
+                    "Last Name" => "LastName",
+                    "Start Date" => "StartDate",
+                    _ => throw new ArgumentException("Invalid search column")
+                };
+
+                // Determine appropriate filter based on column type
+                string filter;
+
+                if (columnName == "ID") // Numeric column
+                {
+                    if (!int.TryParse(searchText, out _)) // Check if the input is numeric
+                    {
+                        MessageBox.Show("Please enter a valid numeric value for ID.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    filter = string.IsNullOrEmpty(searchText) ? "" : $"{columnName} = {searchText}";
+                }
+                else if (columnName == "StartDate") // Date column
+                {
+                    if (!DateTime.TryParse(searchText, out _)) // Validate date format
+                    {
+                        MessageBox.Show("Please enter a valid date in the format YYYY-MM-DD.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    filter = string.IsNullOrEmpty(searchText) ? "" : $"{columnName} = '{searchText}'";
+                }
+                else // String columns
+                {
+                    filter = string.IsNullOrEmpty(searchText) ? "" : $"{columnName} LIKE '%{searchText}%'";
+                }
+
+                // Apply the filter
+                DataView dataView = leaveDataTable.DefaultView;
+                dataView.RowFilter = filter;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while searching: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cmbSortBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSortBy.SelectedIndex == -1) // No item selected
+            {
+                return; // Do nothing
+            }
+
+            if (leaveDataTable == null || leaveDataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("No data available for sorting.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string sortColumn = cmbSortBy.SelectedItem.ToString();
+            try
+            {
+                string columnName = sortColumn switch
+                {
+                    "Start Date" => "StartDate",
+                    "Leave Type" => "LeaveType",
+                    "Status" => "Status",
+                    _ => throw new ArgumentException("Invalid sort column")
+                };
+
+                DataView dataView = leaveDataTable.DefaultView;
+                dataView.Sort = $"{columnName} ASC";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while sorting: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Clear the search box and reset combo boxes
+                txtSearch.Clear();
+                cmbSearch.SelectedIndex = -1; // Reset search combo box
+                cmbSortBy.SelectedIndex = -1; // Reset sort combo box
+
+                // Reload the original data into the DataGridView
+                LoadLeaveApprovals();
+
+                // Reset the focus to the search text box
+                txtSearch.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while resetting: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
 
