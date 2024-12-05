@@ -119,6 +119,8 @@ namespace SWD606_Assignment2
                 // Reset DateTimePickers to current date after successful submission
                 datePickerStart.Value = DateTime.Now;
                 datePickerEnd.Value = DateTime.Now;
+                comboLeaveType.SelectedItem = null;  // Deselect the leave type
+                txtReason.Clear();  // Clear the reason text box
             }
             catch (Exception ex)
             {

@@ -15,7 +15,12 @@ namespace SWD606_Assignment2
     public partial class LeaveApprovals : Form
     {
         private DataTable leaveDataTable; // Holds the leave approvals data
-
+        private bool isAdmin; // Store the admin status
+        public LeaveApprovals(bool isAdmin)
+        {
+            InitializeComponent();
+            this.isAdmin = isAdmin;
+        }
         public LeaveApprovals()
         {
             InitializeComponent();
@@ -63,6 +68,25 @@ namespace SWD606_Assignment2
             // Attach events
             btnSearch.Click += btnSearch_Click;
             cmbSortBy.SelectedIndexChanged += cmbSortBy_SelectedIndexChanged;
+
+            // Disable buttons if the user is an admin
+            if (isAdmin)
+            {
+                dgvLeaveApprovals.Columns["Approve"].ReadOnly = true;
+                dgvLeaveApprovals.Columns["Reject"].ReadOnly = true;
+
+                // Optionally, make the buttons visually disabled
+                dgvLeaveApprovals.CellFormatting += (s, e) =>
+                {
+                    if (e.RowIndex >= 0 &&
+                        (e.ColumnIndex == dgvLeaveApprovals.Columns["Approve"].Index ||
+                         e.ColumnIndex == dgvLeaveApprovals.Columns["Reject"].Index))
+                    {
+                        e.CellStyle.BackColor = Color.Gray;
+                        e.CellStyle.ForeColor = Color.DarkGray;
+                    }
+                };
+            }
         }
 
         // Method to load leave requests from the database        
@@ -105,6 +129,10 @@ namespace SWD606_Assignment2
         // Adjust the button click logic
         private void DgvLeaveApprovals_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Skip processing if admin is logged in (disable functionality)
+            if (isAdmin)
+                return;  // Prevent the button click from being processed
+
             if (e.RowIndex >= 0 && dgvLeaveApprovals.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                 string action = dgvLeaveApprovals.Columns[e.ColumnIndex].Name; // Get the column name (Approve or Reject)
@@ -114,6 +142,13 @@ namespace SWD606_Assignment2
                 int userId = Convert.ToInt32(dgvLeaveApprovals.Rows[e.RowIndex].Cells["ID"].Value); // User ID for leave balance update
                 DateTime startDate = Convert.ToDateTime(dgvLeaveApprovals.Rows[e.RowIndex].Cells["StartDate"].Value); // Get the start date
                 DateTime endDate = Convert.ToDateTime(dgvLeaveApprovals.Rows[e.RowIndex].Cells["EndDate"].Value); // Get the end date
+
+                // Show confirmation dialog before approving or rejecting
+                var confirmResult = MessageBox.Show($"Are you sure you want to {action.ToLower()} this leave request?",
+                                                    "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.No)
+                    return; // If user chooses 'No', exit without performing the action
 
                 try
                 {
@@ -147,6 +182,17 @@ namespace SWD606_Assignment2
                             }
                         }
                     }
+
+                    // Disable the approve/reject buttons once the request is processed
+                    dgvLeaveApprovals.Rows[e.RowIndex].Cells["Approve"].ReadOnly = true;
+                    dgvLeaveApprovals.Rows[e.RowIndex].Cells["Reject"].ReadOnly = true;
+
+                    // Visually disable the buttons by changing their background color
+                    dgvLeaveApprovals.Rows[e.RowIndex].Cells["Approve"].Style.BackColor = Color.Gray;
+                    dgvLeaveApprovals.Rows[e.RowIndex].Cells["Reject"].Style.BackColor = Color.Gray;
+
+                    // Ensure the DataGridView is refreshed so that the changes are visible
+                    dgvLeaveApprovals.Refresh();
 
                     MessageBox.Show($"Leave request {action}d successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

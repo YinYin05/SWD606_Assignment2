@@ -29,32 +29,129 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            btnReset = new Button();
+            btnSearch = new Button();
+            label3 = new Label();
+            txtSearch = new TextBox();
+            cmbSearch = new ComboBox();
+            label2 = new Label();
+            label1 = new Label();
+            btnLeaveApprovals = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 135);
+            dataGridView1.Location = new Point(12, 114);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(755, 188);
+            dataGridView1.Size = new Size(1327, 385);
             dataGridView1.TabIndex = 0;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(515, 57);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(85, 30);
+            btnReset.TabIndex = 15;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(432, 58);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(63, 29);
+            btnSearch.TabIndex = 14;
+            btnSearch.Text = "Go";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(229, 61);
+            label3.Name = "label3";
+            label3.Size = new Size(32, 20);
+            label3.TabIndex = 13;
+            label3.Text = "by :";
+            // 
+            // txtSearch
+            // 
+            txtSearch.Location = new Point(86, 58);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(134, 27);
+            txtSearch.TabIndex = 12;
+            // 
+            // cmbSearch
+            // 
+            cmbSearch.FormattingEnabled = true;
+            cmbSearch.Location = new Point(268, 58);
+            cmbSearch.Name = "cmbSearch";
+            cmbSearch.Size = new Size(158, 28);
+            cmbSearch.TabIndex = 11;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(20, 61);
+            label2.Name = "label2";
+            label2.Size = new Size(60, 20);
+            label2.TabIndex = 10;
+            label2.Text = "Search :";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(550, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(179, 20);
+            label1.TabIndex = 16;
+            label1.Text = "Employee Leave Balances";
+            // 
+            // btnLeaveApprovals
+            // 
+            btnLeaveApprovals.Location = new Point(1165, 61);
+            btnLeaveApprovals.Name = "btnLeaveApprovals";
+            btnLeaveApprovals.Size = new Size(141, 29);
+            btnLeaveApprovals.TabIndex = 17;
+            btnLeaveApprovals.Text = "Leave Approvals";
+            btnLeaveApprovals.UseVisualStyleBackColor = true;
+            btnLeaveApprovals.Click += btnLeaveApprovals_Click;
             // 
             // LeaveManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1351, 527);
+            Controls.Add(btnLeaveApprovals);
+            Controls.Add(label1);
+            Controls.Add(btnReset);
+            Controls.Add(btnSearch);
+            Controls.Add(label3);
+            Controls.Add(txtSearch);
+            Controls.Add(cmbSearch);
+            Controls.Add(label2);
             Controls.Add(dataGridView1);
             Name = "LeaveManagement";
-            Text = "LeaveManagement";
+            Text = "Leave Management";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private DataGridView dataGridView1;
+        private Button btnReset;
+        private Button btnSearch;
+        private Label label3;
+        private TextBox txtSearch;
+        private ComboBox cmbSearch;
+        private Label label2;
+        private Label label1;
+        private Button btnLeaveApprovals;
     }
 }
