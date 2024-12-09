@@ -157,7 +157,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1034, 491);
             panel2.TabIndex = 1;
-            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
