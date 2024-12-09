@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashboard2));
             panel1 = new Panel();
+            btnLeaveApprovals = new Button();
             AccountInformationButton = new Button();
             OffBoardingButton = new Button();
             VoiceGrievancesButton = new Button();
@@ -38,13 +39,14 @@
             labelFN = new Label();
             profileIMG = new PictureBox();
             panel2 = new Panel();
-            btnLeaveApprovals = new Button();
+            LogOutButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profileIMG).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(LogOutButton);
             panel1.Controls.Add(btnLeaveApprovals);
             panel1.Controls.Add(AccountInformationButton);
             panel1.Controls.Add(OffBoardingButton);
@@ -59,12 +61,25 @@
             panel1.Size = new Size(186, 597);
             panel1.TabIndex = 0;
             // 
+            // btnLeaveApprovals
+            // 
+            btnLeaveApprovals.FlatAppearance.BorderSize = 0;
+            btnLeaveApprovals.FlatStyle = FlatStyle.Flat;
+            btnLeaveApprovals.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLeaveApprovals.Location = new Point(0, 277);
+            btnLeaveApprovals.Name = "btnLeaveApprovals";
+            btnLeaveApprovals.Size = new Size(186, 42);
+            btnLeaveApprovals.TabIndex = 9;
+            btnLeaveApprovals.Text = "Leave Approvals";
+            btnLeaveApprovals.UseVisualStyleBackColor = true;
+            btnLeaveApprovals.Click += btnLeaveApprovals_Click;
+            // 
             // AccountInformationButton
             // 
             AccountInformationButton.FlatAppearance.BorderSize = 0;
             AccountInformationButton.FlatStyle = FlatStyle.Flat;
             AccountInformationButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AccountInformationButton.Location = new Point(0, 553);
+            AccountInformationButton.Location = new Point(0, 353);
             AccountInformationButton.Name = "AccountInformationButton";
             AccountInformationButton.Size = new Size(186, 42);
             AccountInformationButton.TabIndex = 7;
@@ -77,7 +92,7 @@
             OffBoardingButton.FlatAppearance.BorderSize = 0;
             OffBoardingButton.FlatStyle = FlatStyle.Flat;
             OffBoardingButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            OffBoardingButton.Location = new Point(0, 505);
+            OffBoardingButton.Location = new Point(0, 314);
             OffBoardingButton.Name = "OffBoardingButton";
             OffBoardingButton.Size = new Size(186, 42);
             OffBoardingButton.TabIndex = 8;
@@ -151,18 +166,18 @@
             panel2.Size = new Size(1068, 597);
             panel2.TabIndex = 1;
             // 
-            // btnLeaveApprovals
+            // LogOutButton
             // 
-            btnLeaveApprovals.FlatAppearance.BorderSize = 0;
-            btnLeaveApprovals.FlatStyle = FlatStyle.Flat;
-            btnLeaveApprovals.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLeaveApprovals.Location = new Point(0, 277);
-            btnLeaveApprovals.Name = "btnLeaveApprovals";
-            btnLeaveApprovals.Size = new Size(186, 42);
-            btnLeaveApprovals.TabIndex = 9;
-            btnLeaveApprovals.Text = "Leave Approvals";
-            btnLeaveApprovals.UseVisualStyleBackColor = true;
-            btnLeaveApprovals.Click += btnLeaveApprovals_Click;
+            LogOutButton.FlatAppearance.BorderSize = 0;
+            LogOutButton.FlatStyle = FlatStyle.Flat;
+            LogOutButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LogOutButton.Location = new Point(0, 391);
+            LogOutButton.Name = "LogOutButton";
+            LogOutButton.Size = new Size(186, 42);
+            LogOutButton.TabIndex = 10;
+            LogOutButton.Text = "Log out";
+            LogOutButton.UseVisualStyleBackColor = true;
+            LogOutButton.Click += LogOutButton_Click;
             // 
             // EmployeeDashboard2
             // 
@@ -192,5 +207,6 @@
         private Button OffBoardingButton;
         private Panel panel2;
         private Button btnLeaveApprovals;
+        private Button LogOutButton;
     }
 }

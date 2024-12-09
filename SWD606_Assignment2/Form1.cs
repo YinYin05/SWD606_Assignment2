@@ -29,9 +29,9 @@ namespace SWD606_Assignment2
             {
                 //using (SqlConnection con = new SqlConnection("Data Source = JP_F15\\SQLEXPRESS; Initial Catalog = SWD606; Integrated Security = True; Encrypt = True;TrustServerCertificate=True"))
                 string myConn = ConfigurationManager.ConnectionStrings["databaseConnect"].ConnectionString;
-                
+
                 SqlConnection con = new SqlConnection(myConn);
-                
+
                 {
                     con.Open();
 
@@ -58,26 +58,26 @@ namespace SWD606_Assignment2
 
                                 // Navigate based on role
                                 if (Role == "Admin")
-                                    {
-                                        adminDashboard adminDashboard = new adminDashboard();
-                                        adminDashboard.Show();
-                                    }
-                                    else if (Role == "Employee")
-                                    {
-                                        /*employeeDashboard employeeDashboard = new employeeDashboard();
-                                        employeeDashboard.Show();*/
-                                        EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
-                                        employeeDashboard2.Show();
-                                    }
-                                    else if (Role == "Manager")
-                                    {
-                                        // For Manager, load EmployeeDashboard2 with additional features
-                                        EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
-                                        employeeDashboard2.Show();
-                                    }
+                                {
+                                    adminDashboard adminDashboard = new adminDashboard();
+                                    adminDashboard.Show();
+                                }
+                                else if (Role == "Employee")
+                                {
+                                    /*employeeDashboard employeeDashboard = new employeeDashboard();
+                                    employeeDashboard.Show();*/
+                                    EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
+                                    employeeDashboard2.Show();
+                                }
+                                else if (Role == "Manager")
+                                {
+                                    // For Manager, load EmployeeDashboard2 with additional features
+                                    EmployeeDashboard2 employeeDashboard2 = new EmployeeDashboard2();
+                                    employeeDashboard2.Show();
+                                }
 
                                 else
-                                    {
+                                {
                                     MessageBox.Show("Unknown role. Please contact the administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     return;
                                 }
@@ -91,12 +91,17 @@ namespace SWD606_Assignment2
                             }
                         }
                     }
-                }            
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     public class UserSession

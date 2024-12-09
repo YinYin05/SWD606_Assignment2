@@ -106,5 +106,13 @@ namespace SWD606_Assignment2
             // Show the form
             leaveApprovals.Show();
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            UserSession.Instance.ClearSession();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+        }
     }
 }

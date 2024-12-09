@@ -93,6 +93,7 @@
             MinimizeBox = false;
             Name = "Form1";
             Text = "Login";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
