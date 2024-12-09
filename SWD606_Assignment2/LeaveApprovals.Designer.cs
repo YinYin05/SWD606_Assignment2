@@ -45,19 +45,19 @@
             // 
             dgvLeaveApprovals.BackgroundColor = SystemColors.Control;
             dgvLeaveApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLeaveApprovals.Location = new Point(40, 94);
+            dgvLeaveApprovals.Location = new Point(116, 126);
             dgvLeaveApprovals.Name = "dgvLeaveApprovals";
             dgvLeaveApprovals.RowHeadersWidth = 51;
-            dgvLeaveApprovals.Size = new Size(1744, 527);
+            dgvLeaveApprovals.Size = new Size(799, 290);
             dgvLeaveApprovals.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(808, 19);
+            label1.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(845, 449);
             label1.Name = "label1";
-            label1.Size = new Size(238, 27);
+            label1.Size = new Size(186, 25);
             label1.TabIndex = 1;
             label1.Text = "Leave Approvals List";
             label1.Click += label1_Click;
@@ -83,8 +83,7 @@
             // 
             // txtSearch
             // 
-            txtSearch.Font = new Font("Century Gothic", 9F);
-            txtSearch.Location = new Point(112, 51);
+            txtSearch.Location = new Point(116, 54);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(134, 26);
             txtSearch.TabIndex = 4;
@@ -147,8 +146,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1829, 653);
+            BackColor = Color.White;
+            ClientSize = new Size(1043, 483);
             Controls.Add(btnReset);
             Controls.Add(label4);
             Controls.Add(cmbSortBy);
@@ -159,6 +158,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dgvLeaveApprovals);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "LeaveApprovals";
             Text = "Leave Approvals";
             Load += LeaveApprovals_Load;
