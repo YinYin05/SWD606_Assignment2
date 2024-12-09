@@ -93,7 +93,7 @@ namespace SWD606_Assignment2
             openchildform(new OffBoarding());
         }
 
-       
+
 
         private void btnLeaveApprovals_Click(object sender, EventArgs e)
         {
@@ -108,6 +108,29 @@ namespace SWD606_Assignment2
         {
 
         }
+
+        /*  private void pictureBox1_Click(object sender, EventArgs e)
+          {
+              Form1 form = new Form1();
+              this.Close();
+              form.Show();
+          }
+        */
+        /* private void pictureBox1_Click_1(object sender, EventArgs e)
+         {
+             Form1 form = new Form1();
+             this.Close();
+             form.Show();
+         }
+        */
+
+      /*  private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            this.Close();
+            form.Show();
+        }
+      */
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

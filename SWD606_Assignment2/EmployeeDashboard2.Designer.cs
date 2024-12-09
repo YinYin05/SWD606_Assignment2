@@ -133,7 +133,7 @@
             // 
             labelFN.AutoSize = true;
             labelFN.Font = new Font("Lucida Console", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFN.Location = new Point(38, 105);
+            labelFN.Location = new Point(23, 105);
             labelFN.Name = "labelFN";
             labelFN.Size = new Size(61, 15);
             labelFN.TabIndex = 2;
@@ -143,7 +143,7 @@
             // profileIMG
             // 
             profileIMG.Image = (Image)resources.GetObject("profileIMG.Image");
-            profileIMG.Location = new Point(45, 22);
+            profileIMG.Location = new Point(44, 22);
             profileIMG.Name = "profileIMG";
             profileIMG.Size = new Size(63, 63);
             profileIMG.SizeMode = PictureBoxSizeMode.Zoom;
@@ -172,13 +172,12 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.logoutIcon;
-            pictureBox1.InitialImage = Properties.Resources.logoutIcon;
-            pictureBox1.Location = new Point(950, 26);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(946, 24);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 38);
+            pictureBox1.Size = new Size(37, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
+            pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
