@@ -193,5 +193,10 @@ namespace SWD606_Assignment2
             // Show the form
             leaveForm.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
