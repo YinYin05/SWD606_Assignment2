@@ -34,8 +34,8 @@
             subjectBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            emailBox = new TextBox();
             label4 = new Label();
+            label5 = new Label();
             SuspendLayout();
             // 
             // SendBTN
@@ -96,13 +96,6 @@
             label3.TabIndex = 7;
             label3.Text = "To:";
             // 
-            // emailBox
-            // 
-            emailBox.Location = new Point(294, 71);
-            emailBox.Name = "emailBox";
-            emailBox.Size = new Size(261, 27);
-            emailBox.TabIndex = 8;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -113,14 +106,23 @@
             label4.TabIndex = 9;
             label4.Text = "Employee Greivances";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(294, 77);
+            label5.Name = "label5";
+            label5.Size = new Size(244, 20);
+            label5.TabIndex = 10;
+            label5.Text = "reca.management2024@gmail.com";
+            // 
             // VoiceGrievances
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1016, 444);
+            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(emailBox);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(subjectBox);
@@ -130,6 +132,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "VoiceGrievances";
             Text = " ";
+            Load += VoiceGrievances_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,7 +146,7 @@
         private Label label2;
         //private MaskedTextBox managerEmailBox;
         private Label label3;
-        private TextBox emailBox;
         private Label label4;
+        private Label label5;
     }
 }
