@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashboard2));
             panel1 = new Panel();
             btnLeaveApprovals = new Button();
-            AccountInformationButton = new Button();
             OffBoardingButton = new Button();
             VoiceGrievancesButton = new Button();
             RequestLeaveButton = new Button();
@@ -53,7 +52,6 @@
             // 
             panel1.BackColor = Color.FromArgb(192, 192, 255);
             panel1.Controls.Add(btnLeaveApprovals);
-            panel1.Controls.Add(AccountInformationButton);
             panel1.Controls.Add(OffBoardingButton);
             panel1.Controls.Add(VoiceGrievancesButton);
             panel1.Controls.Add(RequestLeaveButton);
@@ -79,27 +77,14 @@
             btnLeaveApprovals.UseVisualStyleBackColor = true;
             btnLeaveApprovals.Click += btnLeaveApprovals_Click;
             // 
-            // AccountInformationButton
-            // 
-            AccountInformationButton.FlatAppearance.BorderSize = 0;
-            AccountInformationButton.FlatStyle = FlatStyle.Flat;
-            AccountInformationButton.Font = new Font("Lucida Fax", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AccountInformationButton.Location = new Point(0, 553);
-            AccountInformationButton.Name = "AccountInformationButton";
-            AccountInformationButton.Size = new Size(168, 42);
-            AccountInformationButton.TabIndex = 7;
-            AccountInformationButton.Text = "Account Information";
-            AccountInformationButton.UseVisualStyleBackColor = true;
-            AccountInformationButton.Click += AccountInformationButton_Click;
-            // 
             // OffBoardingButton
             // 
             OffBoardingButton.FlatAppearance.BorderSize = 0;
             OffBoardingButton.FlatStyle = FlatStyle.Flat;
             OffBoardingButton.Font = new Font("Lucida Fax", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            OffBoardingButton.Location = new Point(0, 505);
+            OffBoardingButton.Location = new Point(0, 554);
             OffBoardingButton.Name = "OffBoardingButton";
-            OffBoardingButton.Size = new Size(165, 42);
+            OffBoardingButton.Size = new Size(168, 42);
             OffBoardingButton.TabIndex = 8;
             OffBoardingButton.Text = "Off Boarding";
             OffBoardingButton.UseVisualStyleBackColor = true;
@@ -245,7 +230,6 @@
         private Button VoiceGrievancesButton;
         private Button RequestLeaveButton;
         private Button PayrollBTN;
-        private Button AccountInformationButton;
         private Button OffBoardingButton;
         private Panel panel2;
         private Button btnLeaveApprovals;
