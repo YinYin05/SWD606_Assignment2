@@ -93,10 +93,7 @@ namespace SWD606_Assignment2
             openchildform(new OffBoarding());
         }
 
-        private void AccountInformationButton_Click(object sender, EventArgs e)
-        {
-            openchildform(new AccountInformation());
-        }
+       
 
         private void btnLeaveApprovals_Click(object sender, EventArgs e)
         {
