@@ -56,28 +56,29 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            label1.Location = new Point(47, 99);
+            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label1.Location = new Point(12, 98);
             label1.Name = "label1";
-            label1.Size = new Size(110, 18);
+            label1.Size = new Size(146, 23);
             label1.TabIndex = 1;
             label1.Text = "Employee ID :";
             // 
             // txtSearch
             // 
             txtSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtSearch.Location = new Point(158, 96);
+            txtSearch.Location = new Point(164, 98);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(125, 26);
             txtSearch.TabIndex = 2;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnSearch
             // 
             btnSearch.BackColor = Color.Yellow;
-            btnSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            btnSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             btnSearch.Location = new Point(300, 95);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(94, 29);
+            btnSearch.Size = new Size(110, 40);
             btnSearch.TabIndex = 3;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
@@ -86,30 +87,30 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label2.Location = new Point(570, 99);
             label2.Name = "label2";
-            label2.Size = new Size(95, 18);
+            label2.Size = new Size(128, 23);
             label2.TabIndex = 4;
             label2.Text = "Filter Dates :";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label3.Location = new Point(679, 99);
             label3.Name = "label3";
-            label3.Size = new Size(52, 18);
+            label3.Size = new Size(70, 23);
             label3.TabIndex = 5;
             label3.Text = "From :";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label4.Location = new Point(679, 141);
             label4.Name = "label4";
-            label4.Size = new Size(32, 18);
+            label4.Size = new Size(43, 23);
             label4.TabIndex = 6;
             label4.Text = "To :";
             // 
@@ -132,10 +133,10 @@
             // btnFilter
             // 
             btnFilter.BackColor = Color.FromArgb(255, 192, 128);
-            btnFilter.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            btnFilter.Location = new Point(774, 175);
+            btnFilter.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnFilter.Location = new Point(747, 173);
             btnFilter.Name = "btnFilter";
-            btnFilter.Size = new Size(94, 29);
+            btnFilter.Size = new Size(110, 40);
             btnFilter.TabIndex = 9;
             btnFilter.Text = "Filter";
             btnFilter.UseVisualStyleBackColor = false;
@@ -144,10 +145,10 @@
             // btnReset
             // 
             btnReset.BackColor = Color.Cyan;
-            btnReset.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            btnReset.Location = new Point(400, 95);
+            btnReset.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnReset.Location = new Point(416, 95);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(94, 31);
+            btnReset.Size = new Size(110, 40);
             btnReset.TabIndex = 10;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
@@ -156,10 +157,10 @@
             // btnResetFilter
             // 
             btnResetFilter.BackColor = Color.FromArgb(255, 128, 0);
-            btnResetFilter.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            btnResetFilter.Location = new Point(885, 173);
+            btnResetFilter.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnResetFilter.Location = new Point(887, 172);
             btnResetFilter.Name = "btnResetFilter";
-            btnResetFilter.Size = new Size(94, 31);
+            btnResetFilter.Size = new Size(110, 40);
             btnResetFilter.TabIndex = 11;
             btnResetFilter.Text = "Reset";
             btnResetFilter.UseVisualStyleBackColor = false;
