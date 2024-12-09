@@ -16,17 +16,24 @@ namespace SWD606_Assignment2
     {
         public VoiceGrievances()
         {
+            //initalizing form coponents
             InitializeComponent();
         }
 
         private void SendBTN_Click(object sender, EventArgs e)
         {
-            using(MailMessage mail = new("reca.employee@gmail.com", emailBox.Text, subjectBox.Text, messageBox.Text))
-            using (SmtpClient smtp = new("smtp.gmail.com", 587))
+            // Create a new MailMessage object with the sender, recipient, subject, and body
+            using (MailMessage mail = new("reca.employee@gmail.com", emailBox.Text, subjectBox.Text, messageBox.Text))
+            // Create an SmtpClient object to handle email sending via Gmail's SMTP server
+            using (SmtpClient smtp = new("smtp.gmail.com", 587)) // "smtp.gmail.com" is Gmail's SMTP server and port 587 is for TLS
             {
+                // Disable default credentials and specify custom credentials (email and app password)
                 smtp.UseDefaultCredentials = false;
+                // Use a NetworkCredential object for authentication (app-specific password used here for Gmail)
                 smtp.Credentials = new NetworkCredential("reca.employee@gmail.com", "nmhtcnefqcguxijs");
+                // Enable SSL/TLS encryption for secure email communication
                 smtp.EnableSsl = true;
+                // Send the email using the configured MailMessage and SmtpClient
                 smtp.Send(mail);
             }
         }
