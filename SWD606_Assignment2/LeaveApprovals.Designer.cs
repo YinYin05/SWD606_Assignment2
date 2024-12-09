@@ -45,19 +45,19 @@
             // 
             dgvLeaveApprovals.BackgroundColor = SystemColors.Control;
             dgvLeaveApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLeaveApprovals.Location = new Point(116, 126);
+            dgvLeaveApprovals.Location = new Point(40, 94);
             dgvLeaveApprovals.Name = "dgvLeaveApprovals";
             dgvLeaveApprovals.RowHeadersWidth = 51;
-            dgvLeaveApprovals.Size = new Size(799, 290);
+            dgvLeaveApprovals.Size = new Size(1744, 527);
             dgvLeaveApprovals.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Nirmala UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(845, 449);
+            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(808, 19);
             label1.Name = "label1";
-            label1.Size = new Size(186, 25);
+            label1.Size = new Size(238, 27);
             label1.TabIndex = 1;
             label1.Text = "Leave Approvals List";
             label1.Click += label1_Click;
@@ -65,10 +65,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(50, 57);
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label2.Location = new Point(46, 54);
             label2.Name = "label2";
-            label2.Size = new Size(67, 17);
+            label2.Size = new Size(68, 18);
             label2.TabIndex = 2;
             label2.Text = "Search :";
             // 
@@ -76,14 +76,15 @@
             // 
             cmbSearch.Font = new Font("Century Gothic", 9F);
             cmbSearch.FormattingEnabled = true;
-            cmbSearch.Location = new Point(298, 54);
+            cmbSearch.Location = new Point(294, 51);
             cmbSearch.Name = "cmbSearch";
             cmbSearch.Size = new Size(158, 28);
             cmbSearch.TabIndex = 3;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(116, 54);
+            txtSearch.Font = new Font("Century Gothic", 9F);
+            txtSearch.Location = new Point(112, 51);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(134, 26);
             txtSearch.TabIndex = 4;
@@ -91,17 +92,18 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(259, 57);
+            label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label3.Location = new Point(255, 54);
             label3.Name = "label3";
-            label3.Size = new Size(37, 17);
+            label3.Size = new Size(35, 18);
             label3.TabIndex = 5;
             label3.Text = "by :";
             // 
             // btnSearch
             // 
-            btnSearch.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSearch.Location = new Point(462, 54);
+            btnSearch.BackColor = Color.Yellow;
+            btnSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            btnSearch.Location = new Point(458, 51);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(63, 29);
             btnSearch.TabIndex = 6;
@@ -130,8 +132,9 @@
             // 
             // btnReset
             // 
-            btnReset.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnReset.Location = new Point(545, 53);
+            btnReset.BackColor = Color.Cyan;
+            btnReset.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            btnReset.Location = new Point(541, 50);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(85, 30);
             btnReset.TabIndex = 9;
@@ -143,8 +146,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1043, 483);
+            BackColor = SystemColors.ControlDarkDark;
+            ClientSize = new Size(1829, 653);
             Controls.Add(btnReset);
             Controls.Add(label4);
             Controls.Add(cmbSortBy);
@@ -155,7 +158,6 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dgvLeaveApprovals);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "LeaveApprovals";
             Text = "Leave Approvals";
             Load += LeaveApprovals_Load;
