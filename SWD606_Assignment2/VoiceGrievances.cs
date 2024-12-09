@@ -22,8 +22,11 @@ namespace SWD606_Assignment2
 
         private void SendBTN_Click(object sender, EventArgs e)
         {
+            // Defining a pre-designated email address (recipient)
+            string recipientEmail = "reca.management2024@gmail.com";
+
             // Create a new MailMessage object with the sender, recipient, subject, and body
-            using (MailMessage mail = new("reca.employee@gmail.com", emailBox.Text, subjectBox.Text, messageBox.Text))
+            using (MailMessage mail = new("reca.employee@gmail.com", recipientEmail, subjectBox.Text, messageBox.Text))
             // Create an SmtpClient object to handle email sending via Gmail's SMTP server
             using (SmtpClient smtp = new("smtp.gmail.com", 587)) // "smtp.gmail.com" is Gmail's SMTP server and port 587 is for TLS
             {
@@ -38,5 +41,9 @@ namespace SWD606_Assignment2
             }
         }
 
+        private void VoiceGrievances_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
