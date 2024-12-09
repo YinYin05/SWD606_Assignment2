@@ -37,10 +37,10 @@
             emailBox = new TextBox();
             SuspendLayout();
             // 
-            // Send
+            // SendBTN
             // 
             SendBTN.Location = new Point(344, 382);
-            SendBTN.Name = "Send";
+            SendBTN.Name = "SendBTN";
             SendBTN.Size = new Size(94, 29);
             SendBTN.TabIndex = 0;
             SendBTN.Text = "Send Email";
@@ -109,7 +109,7 @@
             Controls.Add(label1);
             Controls.Add(SendBTN);
             Name = "VoiceGrievances";
-            Text = "VoiceGrievances";
+            Text = " ";
             ResumeLayout(false);
             PerformLayout();
         }

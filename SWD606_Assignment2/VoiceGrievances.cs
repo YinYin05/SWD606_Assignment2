@@ -21,35 +21,13 @@ namespace SWD606_Assignment2
 
         private void SendBTN_Click(object sender, EventArgs e)
         {
-            try
+            using(MailMessage mail = new("reca.employee@gmail.com", emailBox.Text, subjectBox.Text, messageBox.Text))
+            using (SmtpClient smtp = new("smtp.gmail.com", 587))
             {
-                // User Inputs
-                string to = emailBox.Text;
-                string subject = subjectBox.Text;
-                string body = messageBox.Text;
-
-                // Outlook Setup
-                string email = "RECAS.Staff@outlook.com";
-                string appPassword = "PasswordTest123@"; // Replace with an app-specific password
-                string host = "smtp-mail.outlook.com";
-                int port = 587;
-
-                using (MailMessage mail = new MailMessage(email, to, subject, body))
-                {
-                    using (SmtpClient smtp = new SmtpClient(host, port))
-                    {
-                        smtp.UseDefaultCredentials = false;
-                        smtp.EnableSsl = true; // Enable secure connection (TLS)
-                        smtp.Credentials = new NetworkCredential(email, appPassword);
-
-                        smtp.Send(mail);
-                        MessageBox.Show("Email Sent!", "Success");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error");
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("reca.employee@gmail.com", "nmhtcnefqcguxijs");
+                smtp.EnableSsl = true;
+                smtp.Send(mail);
             }
         }
 
