@@ -43,6 +43,7 @@
             // 
             // dgvLeaveApprovals
             // 
+            dgvLeaveApprovals.BackgroundColor = SystemColors.Control;
             dgvLeaveApprovals.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLeaveApprovals.Location = new Point(116, 126);
             dgvLeaveApprovals.Name = "dgvLeaveApprovals";
@@ -59,6 +60,7 @@
             label1.Size = new Size(186, 25);
             label1.TabIndex = 1;
             label1.Text = "Leave Approvals List";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -72,6 +74,7 @@
             // 
             // cmbSearch
             // 
+            cmbSearch.Font = new Font("Century Gothic", 9F);
             cmbSearch.FormattingEnabled = true;
             cmbSearch.Location = new Point(298, 54);
             cmbSearch.Name = "cmbSearch";
@@ -82,7 +85,7 @@
             // 
             txtSearch.Location = new Point(116, 54);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(134, 27);
+            txtSearch.Size = new Size(134, 26);
             txtSearch.TabIndex = 4;
             // 
             // label3
@@ -103,11 +106,12 @@
             btnSearch.Size = new Size(63, 29);
             btnSearch.TabIndex = 6;
             btnSearch.Text = "Go";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
             // cmbSortBy
             // 
+            cmbSortBy.Font = new Font("Century Gothic", 9F);
             cmbSortBy.FormattingEnabled = true;
             cmbSortBy.Location = new Point(1574, 52);
             cmbSortBy.Name = "cmbSortBy";
@@ -117,9 +121,10 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(1499, 55);
             label4.Name = "label4";
-            label4.Size = new Size(63, 20);
+            label4.Size = new Size(65, 18);
             label4.TabIndex = 8;
             label4.Text = "Sort By :";
             // 
@@ -131,7 +136,7 @@
             btnReset.Size = new Size(85, 30);
             btnReset.TabIndex = 9;
             btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = true;
+            btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
             // LeaveApprovals

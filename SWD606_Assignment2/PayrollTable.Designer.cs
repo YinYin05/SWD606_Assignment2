@@ -45,6 +45,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 249);
             dataGridView1.Name = "dataGridView1";
@@ -55,104 +56,120 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             label1.Location = new Point(47, 99);
             label1.Name = "label1";
-            label1.Size = new Size(101, 20);
+            label1.Size = new Size(110, 18);
             label1.TabIndex = 1;
             label1.Text = "Employee ID :";
             // 
             // txtSearch
             // 
+            txtSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtSearch.Location = new Point(158, 96);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(125, 27);
+            txtSearch.Size = new Size(125, 26);
             txtSearch.TabIndex = 2;
             // 
             // btnSearch
             // 
+            btnSearch.BackColor = Color.Yellow;
+            btnSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             btnSearch.Location = new Point(300, 95);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 3;
             btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             label2.Location = new Point(570, 99);
             label2.Name = "label2";
-            label2.Size = new Size(91, 20);
+            label2.Size = new Size(95, 18);
             label2.TabIndex = 4;
             label2.Text = "Filter Dates :";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             label3.Location = new Point(679, 99);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(52, 18);
             label3.TabIndex = 5;
             label3.Text = "From :";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             label4.Location = new Point(679, 141);
             label4.Name = "label4";
-            label4.Size = new Size(32, 20);
+            label4.Size = new Size(32, 18);
             label4.TabIndex = 6;
             label4.Text = "To :";
             // 
             // dateTimePickerFrom
             // 
+            dateTimePickerFrom.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             dateTimePickerFrom.Location = new Point(746, 96);
             dateTimePickerFrom.Name = "dateTimePickerFrom";
-            dateTimePickerFrom.Size = new Size(251, 27);
+            dateTimePickerFrom.Size = new Size(251, 26);
             dateTimePickerFrom.TabIndex = 7;
             // 
             // dateTimePickerTo
             // 
+            dateTimePickerTo.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             dateTimePickerTo.Location = new Point(747, 140);
             dateTimePickerTo.Name = "dateTimePickerTo";
-            dateTimePickerTo.Size = new Size(250, 27);
+            dateTimePickerTo.Size = new Size(250, 26);
             dateTimePickerTo.TabIndex = 8;
             // 
             // btnFilter
             // 
+            btnFilter.BackColor = Color.FromArgb(255, 192, 128);
+            btnFilter.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             btnFilter.Location = new Point(774, 175);
             btnFilter.Name = "btnFilter";
             btnFilter.Size = new Size(94, 29);
             btnFilter.TabIndex = 9;
             btnFilter.Text = "Filter";
-            btnFilter.UseVisualStyleBackColor = true;
+            btnFilter.UseVisualStyleBackColor = false;
             btnFilter.Click += btnFilter_Click;
             // 
             // btnReset
             // 
+            btnReset.BackColor = Color.Cyan;
+            btnReset.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             btnReset.Location = new Point(400, 95);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(94, 31);
             btnReset.TabIndex = 10;
             btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = true;
+            btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
             // btnResetFilter
             // 
+            btnResetFilter.BackColor = Color.FromArgb(255, 128, 0);
+            btnResetFilter.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             btnResetFilter.Location = new Point(885, 173);
             btnResetFilter.Name = "btnResetFilter";
             btnResetFilter.Size = new Size(94, 31);
             btnResetFilter.TabIndex = 11;
             btnResetFilter.Text = "Reset";
-            btnResetFilter.UseVisualStyleBackColor = true;
+            btnResetFilter.UseVisualStyleBackColor = false;
             btnResetFilter.Click += btnResetFilter_Click;
             // 
             // PayrollTable
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1129, 736);
             Controls.Add(btnResetFilter);
             Controls.Add(btnReset);
