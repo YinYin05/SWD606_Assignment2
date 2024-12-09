@@ -95,9 +95,9 @@
             // 
             btnLeave.BackColor = Color.FromArgb(255, 128, 255);
             btnLeave.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            btnLeave.Location = new Point(47, 154);
+            btnLeave.Location = new Point(47, 151);
             btnLeave.Name = "btnLeave";
-            btnLeave.Size = new Size(216, 49);
+            btnLeave.Size = new Size(216, 60);
             btnLeave.TabIndex = 2;
             btnLeave.Text = "Leave Management";
             btnLeave.UseVisualStyleBackColor = false;
@@ -107,9 +107,9 @@
             // 
             btnPayroll.BackColor = Color.FromArgb(192, 192, 255);
             btnPayroll.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            btnPayroll.Location = new Point(47, 87);
+            btnPayroll.Location = new Point(47, 84);
             btnPayroll.Name = "btnPayroll";
-            btnPayroll.Size = new Size(216, 49);
+            btnPayroll.Size = new Size(216, 60);
             btnPayroll.TabIndex = 1;
             btnPayroll.Text = "Payroll";
             btnPayroll.UseVisualStyleBackColor = false;
@@ -119,9 +119,9 @@
             // 
             btnEmployees.BackColor = Color.Cyan;
             btnEmployees.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            btnEmployees.Location = new Point(47, 20);
+            btnEmployees.Location = new Point(47, 17);
             btnEmployees.Name = "btnEmployees";
-            btnEmployees.Size = new Size(216, 49);
+            btnEmployees.Size = new Size(216, 60);
             btnEmployees.TabIndex = 0;
             btnEmployees.Text = "Employees";
             btnEmployees.UseVisualStyleBackColor = false;
@@ -194,7 +194,7 @@
             btnEdit.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
             btnEdit.Location = new Point(280, 363);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(109, 43);
+            btnEdit.Size = new Size(109, 60);
             btnEdit.TabIndex = 10;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = false;
@@ -206,7 +206,7 @@
             btnSave.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold);
             btnSave.Location = new Point(406, 363);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(109, 43);
+            btnSave.Size = new Size(109, 60);
             btnSave.TabIndex = 11;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
@@ -219,7 +219,7 @@
             btnExit.ForeColor = SystemColors.ButtonFace;
             btnExit.Location = new Point(532, 363);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(109, 43);
+            btnExit.Size = new Size(109, 60);
             btnExit.TabIndex = 12;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
@@ -244,7 +244,7 @@
             panel2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             panel2.Location = new Point(12, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(938, 441);
+            panel2.Size = new Size(938, 439);
             panel2.TabIndex = 13;
             // 
             // adminDashboard
