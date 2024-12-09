@@ -322,5 +322,10 @@ namespace SWD606_Assignment2
             txtSearch.Clear();
             txtSearch.Focus();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

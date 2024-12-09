@@ -42,6 +42,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(12, 114);
             dataGridView1.Name = "dataGridView1";
@@ -51,36 +52,41 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(515, 57);
+            btnReset.BackColor = Color.Cyan;
+            btnReset.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnReset.Location = new Point(607, 60);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(85, 30);
+            btnReset.Size = new Size(100, 30);
             btnReset.TabIndex = 15;
             btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = true;
+            btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(432, 58);
+            btnSearch.BackColor = Color.Yellow;
+            btnSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnSearch.Location = new Point(491, 60);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(63, 29);
+            btnSearch.Size = new Size(100, 30);
             btnSearch.TabIndex = 14;
             btnSearch.Text = "Go";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(229, 61);
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label3.Location = new Point(246, 61);
             label3.Name = "label3";
-            label3.Size = new Size(32, 20);
+            label3.Size = new Size(47, 23);
             label3.TabIndex = 13;
             label3.Text = "by :";
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(86, 58);
+            txtSearch.Location = new Point(106, 61);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(134, 27);
             txtSearch.TabIndex = 12;
@@ -88,7 +94,7 @@
             // cmbSearch
             // 
             cmbSearch.FormattingEnabled = true;
-            cmbSearch.Location = new Point(268, 58);
+            cmbSearch.Location = new Point(290, 61);
             cmbSearch.Name = "cmbSearch";
             cmbSearch.Size = new Size(158, 28);
             cmbSearch.TabIndex = 11;
@@ -96,35 +102,40 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label2.Location = new Point(20, 61);
             label2.Name = "label2";
-            label2.Size = new Size(60, 20);
+            label2.Size = new Size(89, 23);
             label2.TabIndex = 10;
             label2.Text = "Search :";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(550, 9);
             label1.Name = "label1";
-            label1.Size = new Size(179, 20);
+            label1.Size = new Size(308, 27);
             label1.TabIndex = 16;
             label1.Text = "Employee Leave Balances";
             // 
             // btnLeaveApprovals
             // 
-            btnLeaveApprovals.Location = new Point(1165, 61);
+            btnLeaveApprovals.BackColor = Color.FromArgb(255, 128, 255);
+            btnLeaveApprovals.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnLeaveApprovals.Location = new Point(1105, 60);
             btnLeaveApprovals.Name = "btnLeaveApprovals";
-            btnLeaveApprovals.Size = new Size(141, 29);
+            btnLeaveApprovals.Size = new Size(209, 40);
             btnLeaveApprovals.TabIndex = 17;
             btnLeaveApprovals.Text = "Leave Approvals";
-            btnLeaveApprovals.UseVisualStyleBackColor = true;
+            btnLeaveApprovals.UseVisualStyleBackColor = false;
             btnLeaveApprovals.Click += btnLeaveApprovals_Click;
             // 
             // LeaveManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1351, 527);
             Controls.Add(btnLeaveApprovals);
             Controls.Add(label1);

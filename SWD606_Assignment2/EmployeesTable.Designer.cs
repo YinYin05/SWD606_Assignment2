@@ -40,31 +40,35 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 46);
+            label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label1.Location = new Point(40, 46);
             label1.Name = "label1";
-            label1.Size = new Size(98, 20);
+            label1.Size = new Size(144, 23);
             label1.TabIndex = 0;
             label1.Text = "Search Input :";
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(140, 43);
+            txtSearch.Location = new Point(190, 45);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(152, 27);
             txtSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(313, 43);
+            btnSearch.BackColor = Color.Yellow;
+            btnSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnSearch.Location = new Point(385, 43);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(94, 29);
+            btnSearch.Size = new Size(110, 30);
             btnSearch.TabIndex = 2;
             btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(40, 103);
             dataGridView1.Name = "dataGridView1";
@@ -76,27 +80,33 @@
             // 
             // btnReset
             // 
-            btnReset.Location = new Point(413, 43);
+            btnReset.BackColor = Color.Cyan;
+            btnReset.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnReset.Location = new Point(521, 43);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(94, 30);
+            btnReset.Size = new Size(110, 30);
             btnReset.TabIndex = 4;
             btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = true;
+            btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
             // 
             // btnAddEmployee
             // 
-            btnAddEmployee.Location = new Point(1378, 43);
+            btnAddEmployee.BackColor = Color.Fuchsia;
+            btnAddEmployee.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnAddEmployee.Location = new Point(1253, 43);
             btnAddEmployee.Name = "btnAddEmployee";
-            btnAddEmployee.Size = new Size(107, 54);
+            btnAddEmployee.Size = new Size(232, 37);
             btnAddEmployee.TabIndex = 0;
             btnAddEmployee.Text = "Add New Employee";
+            btnAddEmployee.UseVisualStyleBackColor = false;
             btnAddEmployee.Click += btnAddEmployee_Click;
             // 
             // EmployeesTable
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1515, 450);
             Controls.Add(btnAddEmployee);
             Controls.Add(btnReset);

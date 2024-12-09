@@ -39,8 +39,8 @@
             profileIMG = new PictureBox();
             panel2 = new Panel();
             panel3 = new Panel();
-            label2 = new Label();
             pictureBox1 = new PictureBox();
+            label2 = new Label();
             label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profileIMG).BeginInit();
@@ -133,7 +133,7 @@
             // 
             labelFN.AutoSize = true;
             labelFN.Font = new Font("Lucida Console", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFN.Location = new Point(40, 105);
+            labelFN.Location = new Point(23, 105);
             labelFN.Name = "labelFN";
             labelFN.Size = new Size(61, 15);
             labelFN.TabIndex = 2;
@@ -143,7 +143,7 @@
             // profileIMG
             // 
             profileIMG.Image = (Image)resources.GetObject("profileIMG.Image");
-            profileIMG.Location = new Point(47, 22);
+            profileIMG.Location = new Point(44, 22);
             profileIMG.Name = "profileIMG";
             profileIMG.Size = new Size(63, 63);
             profileIMG.SizeMode = PictureBoxSizeMode.Zoom;
@@ -161,14 +161,25 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(192, 192, 255);
-            panel3.Controls.Add(label2);
             panel3.Controls.Add(pictureBox1);
+            panel3.Controls.Add(label2);
             panel3.Controls.Add(label1);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(168, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(1034, 106);
             panel3.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(946, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(37, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label2
             // 
@@ -179,17 +190,6 @@
             label2.Size = new Size(60, 17);
             label2.TabIndex = 2;
             label2.Text = "Logout";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.logoutIcon;
-            pictureBox1.Location = new Point(950, 26);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 38);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
