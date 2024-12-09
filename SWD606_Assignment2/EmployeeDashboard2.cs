@@ -93,10 +93,7 @@ namespace SWD606_Assignment2
             openchildform(new OffBoarding());
         }
 
-        private void AccountInformationButton_Click(object sender, EventArgs e)
-        {
-            openchildform(new AccountInformation());
-        }
+       
 
         private void btnLeaveApprovals_Click(object sender, EventArgs e)
         {
@@ -107,12 +104,16 @@ namespace SWD606_Assignment2
             leaveApprovals.Show();
         }
 
-        private void LogOutButton_Click(object sender, EventArgs e)
+        private void labelFN_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
             this.Close();
-            UserSession.Instance.ClearSession();
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
+            form.Show();
         }
     }
 }

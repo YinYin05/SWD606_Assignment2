@@ -99,9 +99,17 @@ namespace SWD606_Assignment2
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+             MessageBox.Show("A request was sent to the administrator.", "Login Report", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             txtEmail.Focus();
+            
         }
     }
     public class UserSession
