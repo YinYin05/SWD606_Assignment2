@@ -143,5 +143,10 @@ namespace SWD606_Assignment2
         {
             this.Close();
         }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
