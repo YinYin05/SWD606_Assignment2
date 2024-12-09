@@ -98,6 +98,7 @@
             label3.Size = new Size(35, 18);
             label3.TabIndex = 5;
             label3.Text = "by :";
+            label3.Click += label3_Click;
             // 
             // btnSearch
             // 
@@ -105,7 +106,7 @@
             btnSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             btnSearch.Location = new Point(458, 51);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(63, 29);
+            btnSearch.Size = new Size(100, 39);
             btnSearch.TabIndex = 6;
             btnSearch.Text = "Go";
             btnSearch.UseVisualStyleBackColor = false;
@@ -123,10 +124,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(1499, 55);
+            label4.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label4.Location = new Point(1481, 54);
             label4.Name = "label4";
-            label4.Size = new Size(65, 18);
+            label4.Size = new Size(87, 23);
             label4.TabIndex = 8;
             label4.Text = "Sort By :";
             // 
@@ -136,7 +137,7 @@
             btnReset.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
             btnReset.Location = new Point(541, 50);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(85, 30);
+            btnReset.Size = new Size(106, 40);
             btnReset.TabIndex = 9;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
