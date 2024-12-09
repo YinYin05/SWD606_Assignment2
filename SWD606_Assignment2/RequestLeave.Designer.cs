@@ -128,14 +128,14 @@
             label6.AutoSize = true;
             label6.Location = new Point(51, 124);
             label6.Name = "label6";
-            label6.Size = new Size(97, 20);
+            label6.Size = new Size(150, 20);
             label6.TabIndex = 10;
-            label6.Text = "Annual Leave";
+            label6.Text = "Annual Leave (Hours)";
             // 
             // txtAnnual
             // 
             txtAnnual.Enabled = false;
-            txtAnnual.Location = new Point(182, 121);
+            txtAnnual.Location = new Point(226, 121);
             txtAnnual.Name = "txtAnnual";
             txtAnnual.Size = new Size(125, 27);
             txtAnnual.TabIndex = 11;
@@ -143,7 +143,7 @@
             // txtSick
             // 
             txtSick.Enabled = false;
-            txtSick.Location = new Point(182, 154);
+            txtSick.Location = new Point(226, 154);
             txtSick.Name = "txtSick";
             txtSick.Size = new Size(125, 27);
             txtSick.TabIndex = 13;
@@ -153,9 +153,9 @@
             label7.AutoSize = true;
             label7.Location = new Point(51, 157);
             label7.Name = "label7";
-            label7.Size = new Size(77, 20);
+            label7.Size = new Size(130, 20);
             label7.TabIndex = 12;
-            label7.Text = "Sick Leave";
+            label7.Text = "Sick Leave (Hours)";
             // 
             // txtReason
             // 
@@ -184,7 +184,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "RequestLeave";
-            Text = "RequestLeave";
+            Text = "Request Leave";
             Load += RequestLeave_Load;
             ResumeLayout(false);
             PerformLayout();
