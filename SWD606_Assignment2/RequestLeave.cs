@@ -213,5 +213,10 @@ namespace SWD606_Assignment2
                 MessageBox.Show($"Error retrieving leave balances: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void datePickerStart_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

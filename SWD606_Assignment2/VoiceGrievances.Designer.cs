@@ -35,13 +35,15 @@
             label2 = new Label();
             label3 = new Label();
             emailBox = new TextBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // SendBTN
             // 
-            SendBTN.Location = new Point(344, 382);
+            SendBTN.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            SendBTN.Location = new Point(490, 377);
             SendBTN.Name = "SendBTN";
-            SendBTN.Size = new Size(94, 29);
+            SendBTN.Size = new Size(95, 35);
             SendBTN.TabIndex = 0;
             SendBTN.Text = "Send Email";
             SendBTN.UseVisualStyleBackColor = true;
@@ -50,23 +52,26 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(147, 205);
+            label1.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(294, 206);
             label1.Name = "label1";
-            label1.Size = new Size(99, 20);
+            label1.Size = new Size(107, 17);
             label1.TabIndex = 2;
             label1.Text = "Message Box:";
             // 
             // messageBox
             // 
-            messageBox.Location = new Point(147, 228);
+            messageBox.Location = new Point(294, 229);
             messageBox.Multiline = true;
             messageBox.Name = "messageBox";
             messageBox.Size = new Size(496, 113);
             messageBox.TabIndex = 3;
+            messageBox.Tag = "";
+            messageBox.Text = "\r\n\r\n  ";
             // 
             // subjectBox
             // 
-            subjectBox.Location = new Point(147, 154);
+            subjectBox.Location = new Point(294, 155);
             subjectBox.Name = "subjectBox";
             subjectBox.Size = new Size(261, 27);
             subjectBox.TabIndex = 4;
@@ -74,33 +79,47 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(147, 131);
+            label2.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(294, 132);
             label2.Name = "label2";
-            label2.Size = new Size(61, 20);
+            label2.Size = new Size(68, 17);
             label2.TabIndex = 5;
             label2.Text = "Subject:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(147, 47);
+            label3.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(294, 48);
             label3.Name = "label3";
-            label3.Size = new Size(28, 20);
+            label3.Size = new Size(32, 17);
             label3.TabIndex = 7;
             label3.Text = "To:";
             // 
             // emailBox
             // 
-            emailBox.Location = new Point(147, 70);
+            emailBox.Location = new Point(294, 71);
             emailBox.Name = "emailBox";
             emailBox.Size = new Size(261, 27);
             emailBox.TabIndex = 8;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(791, 397);
+            label4.Name = "label4";
+            label4.Size = new Size(213, 28);
+            label4.TabIndex = 9;
+            label4.Text = "Employee Greivances";
             // 
             // VoiceGrievances
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.White;
+            ClientSize = new Size(1016, 444);
+            Controls.Add(label4);
             Controls.Add(emailBox);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -108,6 +127,7 @@
             Controls.Add(messageBox);
             Controls.Add(label1);
             Controls.Add(SendBTN);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "VoiceGrievances";
             Text = " ";
             ResumeLayout(false);
@@ -124,5 +144,6 @@
         //private MaskedTextBox managerEmailBox;
         private Label label3;
         private TextBox emailBox;
+        private Label label4;
     }
 }
