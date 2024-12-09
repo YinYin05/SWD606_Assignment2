@@ -106,5 +106,10 @@ namespace SWD606_Assignment2
             // Show the form
             leaveApprovals.Show();
         }
+
+        private void labelFN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

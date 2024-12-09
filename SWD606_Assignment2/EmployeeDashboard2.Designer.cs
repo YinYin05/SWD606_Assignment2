@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashboard2));
             panel1 = new Panel();
+            btnLeaveApprovals = new Button();
             AccountInformationButton = new Button();
             OffBoardingButton = new Button();
             VoiceGrievancesButton = new Button();
@@ -38,7 +39,6 @@
             labelFN = new Label();
             profileIMG = new PictureBox();
             panel2 = new Panel();
-            btnLeaveApprovals = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profileIMG).BeginInit();
             SuspendLayout();
@@ -58,6 +58,19 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(186, 597);
             panel1.TabIndex = 0;
+            // 
+            // btnLeaveApprovals
+            // 
+            btnLeaveApprovals.FlatAppearance.BorderSize = 0;
+            btnLeaveApprovals.FlatStyle = FlatStyle.Flat;
+            btnLeaveApprovals.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLeaveApprovals.Location = new Point(0, 277);
+            btnLeaveApprovals.Name = "btnLeaveApprovals";
+            btnLeaveApprovals.Size = new Size(186, 42);
+            btnLeaveApprovals.TabIndex = 9;
+            btnLeaveApprovals.Text = "Leave Approvals";
+            btnLeaveApprovals.UseVisualStyleBackColor = true;
+            btnLeaveApprovals.Click += btnLeaveApprovals_Click;
             // 
             // AccountInformationButton
             // 
@@ -132,6 +145,7 @@
             labelFN.Size = new Size(50, 20);
             labelFN.TabIndex = 2;
             labelFN.Text = "label1";
+            labelFN.Click += labelFN_Click;
             // 
             // profileIMG
             // 
@@ -150,19 +164,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1068, 597);
             panel2.TabIndex = 1;
-            // 
-            // btnLeaveApprovals
-            // 
-            btnLeaveApprovals.FlatAppearance.BorderSize = 0;
-            btnLeaveApprovals.FlatStyle = FlatStyle.Flat;
-            btnLeaveApprovals.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLeaveApprovals.Location = new Point(0, 277);
-            btnLeaveApprovals.Name = "btnLeaveApprovals";
-            btnLeaveApprovals.Size = new Size(186, 42);
-            btnLeaveApprovals.TabIndex = 9;
-            btnLeaveApprovals.Text = "Leave Approvals";
-            btnLeaveApprovals.UseVisualStyleBackColor = true;
-            btnLeaveApprovals.Click += btnLeaveApprovals_Click;
             // 
             // EmployeeDashboard2
             // 
