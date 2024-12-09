@@ -212,9 +212,9 @@
             label1.Font = new Font("Lucida Fax", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(25, 35);
             label1.Name = "label1";
-            label1.Size = new Size(359, 46);
+            label1.Size = new Size(661, 46);
             label1.TabIndex = 0;
-            label1.Text = "RECA COMPANY";
+            label1.Text = "RECA ENGINEERING COMPANY";
             // 
             // EmployeeDashboard2
             // 
