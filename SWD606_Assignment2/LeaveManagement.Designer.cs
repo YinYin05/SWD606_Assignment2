@@ -114,10 +114,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(550, 9);
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(501, 3);
             label1.Name = "label1";
-            label1.Size = new Size(308, 27);
+            label1.Size = new Size(373, 34);
             label1.TabIndex = 16;
             label1.Text = "Employee Leave Balances";
             // 

@@ -118,19 +118,19 @@
             // dateTimePickerFrom
             // 
             dateTimePickerFrom.CalendarFont = new Font("Century Gothic", 12F, FontStyle.Bold);
-            dateTimePickerFrom.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            dateTimePickerFrom.Location = new Point(789, 81);
+            dateTimePickerFrom.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerFrom.Location = new Point(789, 79);
             dateTimePickerFrom.Name = "dateTimePickerFrom";
-            dateTimePickerFrom.Size = new Size(288, 26);
+            dateTimePickerFrom.Size = new Size(288, 32);
             dateTimePickerFrom.TabIndex = 7;
             // 
             // dateTimePickerTo
             // 
             dateTimePickerTo.CalendarFont = new Font("Century Gothic", 12F, FontStyle.Bold);
-            dateTimePickerTo.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            dateTimePickerTo.Location = new Point(790, 125);
+            dateTimePickerTo.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerTo.Location = new Point(790, 119);
             dateTimePickerTo.Name = "dateTimePickerTo";
-            dateTimePickerTo.Size = new Size(287, 26);
+            dateTimePickerTo.Size = new Size(287, 32);
             dateTimePickerTo.TabIndex = 8;
             // 
             // btnFilter
@@ -173,7 +173,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(460, 13);
+            label5.Location = new Point(460, 9);
             label5.Name = "label5";
             label5.Size = new Size(201, 37);
             label5.TabIndex = 12;
