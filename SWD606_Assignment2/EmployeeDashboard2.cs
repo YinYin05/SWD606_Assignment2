@@ -34,7 +34,7 @@ namespace SWD606_Assignment2
         private void GetInfo()
         {
             FirstName = UserSession.Instance.FirstName;
-            labelFN.Text = "Hello " + FirstName;
+            labelFN.Text = "Hello " + FirstName + "!";
 
             // Role-specific behavior
             string role = UserSession.Instance.Role;
