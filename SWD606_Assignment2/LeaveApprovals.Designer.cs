@@ -54,10 +54,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(808, 19);
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(801, 3);
             label1.Name = "label1";
-            label1.Size = new Size(238, 27);
+            label1.Size = new Size(289, 34);
             label1.TabIndex = 1;
             label1.Text = "Leave Approvals List";
             label1.Click += label1_Click;
@@ -74,7 +74,7 @@
             // 
             // cmbSearch
             // 
-            cmbSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            cmbSearch.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSearch.FormattingEnabled = true;
             cmbSearch.Location = new Point(363, 51);
             cmbSearch.Name = "cmbSearch";

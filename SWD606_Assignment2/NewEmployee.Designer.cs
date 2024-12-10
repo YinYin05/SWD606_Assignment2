@@ -296,10 +296,10 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(155, 21);
+            label11.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label11.Location = new Point(127, 12);
             label11.Name = "label11";
-            label11.Size = new Size(181, 27);
+            label11.Size = new Size(220, 34);
             label11.TabIndex = 43;
             label11.Text = "New Employee";
             // 
