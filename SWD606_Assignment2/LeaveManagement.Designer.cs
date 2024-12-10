@@ -94,7 +94,7 @@
             // 
             // cmbSearch
             // 
-            cmbSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            cmbSearch.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSearch.FormattingEnabled = true;
             cmbSearch.Location = new Point(295, 61);
             cmbSearch.Name = "cmbSearch";
