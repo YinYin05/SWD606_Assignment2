@@ -87,7 +87,7 @@
             OffBoardingButton.Font = new Font("Lucida Fax", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             OffBoardingButton.Location = new Point(0, 554);
             OffBoardingButton.Name = "OffBoardingButton";
-            OffBoardingButton.Size = new Size(168, 42);
+            OffBoardingButton.Size = new Size(186, 42);
             OffBoardingButton.TabIndex = 8;
             OffBoardingButton.Text = "Off Boarding";
             OffBoardingButton.UseVisualStyleBackColor = true;

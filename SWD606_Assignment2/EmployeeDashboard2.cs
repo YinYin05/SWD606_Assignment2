@@ -134,6 +134,7 @@ namespace SWD606_Assignment2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            UserSession.Instance.ClearSession();
             Form1 form = new Form1();
             this.Close();
             form.Show();
