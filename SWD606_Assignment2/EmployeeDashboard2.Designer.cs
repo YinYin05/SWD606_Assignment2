@@ -38,19 +38,22 @@
             labelFN = new Label();
             profileIMG = new PictureBox();
             panel2 = new Panel();
+            label4 = new Label();
+            label3 = new Label();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)profileIMG).BeginInit();
+            panel2.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(192, 192, 255);
+            panel1.BackColor = Color.Wheat;
             panel1.Controls.Add(btnLeaveApprovals);
             panel1.Controls.Add(OffBoardingButton);
             panel1.Controls.Add(VoiceGrievancesButton);
@@ -132,10 +135,10 @@
             // labelFN
             // 
             labelFN.AutoSize = true;
-            labelFN.Font = new Font("Lucida Console", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelFN.Location = new Point(23, 105);
+            labelFN.Font = new Font("Lucida Fax", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelFN.Location = new Point(22, 105);
             labelFN.Name = "labelFN";
-            labelFN.Size = new Size(61, 15);
+            labelFN.Size = new Size(63, 20);
             labelFN.TabIndex = 2;
             labelFN.Text = "label1";
             labelFN.Click += labelFN_Click;
@@ -143,7 +146,7 @@
             // profileIMG
             // 
             profileIMG.Image = (Image)resources.GetObject("profileIMG.Image");
-            profileIMG.Location = new Point(44, 22);
+            profileIMG.Location = new Point(46, 22);
             profileIMG.Name = "profileIMG";
             profileIMG.Size = new Size(63, 63);
             profileIMG.SizeMode = PictureBoxSizeMode.Zoom;
@@ -153,14 +156,36 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label3);
             panel2.Location = new Point(168, 105);
             panel2.Name = "panel2";
             panel2.Size = new Size(1034, 491);
             panel2.TabIndex = 1;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(419, 231);
+            label4.Name = "label4";
+            label4.Size = new Size(235, 17);
+            label4.TabIndex = 1;
+            label4.Text = "Navigate using the side panel.";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Lucida Fax", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(263, 172);
+            label3.Name = "label3";
+            label3.Size = new Size(517, 32);
+            label3.TabIndex = 0;
+            label3.Text = "Welcome To Employee Dashboard";
+            // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(192, 192, 255);
+            panel3.BackColor = Color.Wheat;
             panel3.Controls.Add(pictureBox1);
             panel3.Controls.Add(label2);
             panel3.Controls.Add(label1);
@@ -216,6 +241,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)profileIMG).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -237,5 +264,7 @@
         private Label label1;
         private Label label2;
         private PictureBox pictureBox1;
+        private Label label4;
+        private Label label3;
     }
 }

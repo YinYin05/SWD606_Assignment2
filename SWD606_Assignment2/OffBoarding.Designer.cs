@@ -49,7 +49,7 @@
             // openFileBTN
             // 
             openFileBTN.AutoSize = true;
-            openFileBTN.Location = new Point(52, 192);
+            openFileBTN.Location = new Point(47, 201);
             openFileBTN.Name = "openFileBTN";
             openFileBTN.Size = new Size(153, 20);
             openFileBTN.TabIndex = 23;
@@ -59,7 +59,9 @@
             // 
             // fileNameTXT
             // 
-            fileNameTXT.Location = new Point(52, 242);
+            fileNameTXT.BorderStyle = BorderStyle.FixedSingle;
+            fileNameTXT.FlatStyle = FlatStyle.Flat;
+            fileNameTXT.Location = new Point(47, 230);
             fileNameTXT.Name = "fileNameTXT";
             fileNameTXT.Size = new Size(325, 65);
             fileNameTXT.TabIndex = 24;

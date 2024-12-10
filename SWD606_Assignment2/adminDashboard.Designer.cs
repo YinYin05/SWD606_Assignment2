@@ -74,6 +74,7 @@
             // 
             txtCompany.Enabled = false;
             txtCompany.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            txtCompany.ForeColor = Color.Black;
             txtCompany.Location = new Point(226, 109);
             txtCompany.Name = "txtCompany";
             txtCompany.ReadOnly = true;
@@ -131,6 +132,7 @@
             // 
             txtAddress.Enabled = false;
             txtAddress.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            txtAddress.ForeColor = Color.Black;
             txtAddress.Location = new Point(226, 148);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
@@ -152,6 +154,7 @@
             // 
             txtEmail.Enabled = false;
             txtEmail.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            txtEmail.ForeColor = Color.Black;
             txtEmail.Location = new Point(226, 259);
             txtEmail.Name = "txtEmail";
             txtEmail.ReadOnly = true;
@@ -172,6 +175,7 @@
             // 
             txtPhoneNumber.Enabled = false;
             txtPhoneNumber.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            txtPhoneNumber.ForeColor = Color.Black;
             txtPhoneNumber.Location = new Point(226, 300);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.ReadOnly = true;
@@ -227,7 +231,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.ControlDarkDark;
+            panel2.BackColor = Color.Wheat;
             panel2.Controls.Add(panel1);
             panel2.Controls.Add(btnSave);
             panel2.Controls.Add(btnExit);

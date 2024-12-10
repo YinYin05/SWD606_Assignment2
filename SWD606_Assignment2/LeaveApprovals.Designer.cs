@@ -54,10 +54,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(808, 19);
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(801, 3);
             label1.Name = "label1";
-            label1.Size = new Size(238, 27);
+            label1.Size = new Size(289, 34);
             label1.TabIndex = 1;
             label1.Text = "Leave Approvals List";
             label1.Click += label1_Click;
@@ -65,37 +65,37 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             label2.Location = new Point(46, 54);
             label2.Name = "label2";
-            label2.Size = new Size(68, 18);
+            label2.Size = new Size(89, 23);
             label2.TabIndex = 2;
             label2.Text = "Search :";
             // 
             // cmbSearch
             // 
-            cmbSearch.Font = new Font("Century Gothic", 9F);
+            cmbSearch.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSearch.FormattingEnabled = true;
-            cmbSearch.Location = new Point(294, 51);
+            cmbSearch.Location = new Point(363, 51);
             cmbSearch.Name = "cmbSearch";
-            cmbSearch.Size = new Size(158, 28);
+            cmbSearch.Size = new Size(189, 31);
             cmbSearch.TabIndex = 3;
             // 
             // txtSearch
             // 
-            txtSearch.Font = new Font("Century Gothic", 9F);
-            txtSearch.Location = new Point(112, 51);
+            txtSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            txtSearch.Location = new Point(138, 51);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(134, 26);
+            txtSearch.Size = new Size(166, 32);
             txtSearch.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            label3.Location = new Point(255, 54);
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            label3.Location = new Point(312, 54);
             label3.Name = "label3";
-            label3.Size = new Size(35, 18);
+            label3.Size = new Size(47, 23);
             label3.TabIndex = 5;
             label3.Text = "by :";
             label3.Click += label3_Click;
@@ -103,8 +103,8 @@
             // btnSearch
             // 
             btnSearch.BackColor = Color.Yellow;
-            btnSearch.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            btnSearch.Location = new Point(458, 51);
+            btnSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnSearch.Location = new Point(574, 48);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(100, 39);
             btnSearch.TabIndex = 6;
@@ -114,11 +114,11 @@
             // 
             // cmbSortBy
             // 
-            cmbSortBy.Font = new Font("Century Gothic", 9F);
+            cmbSortBy.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbSortBy.FormattingEnabled = true;
             cmbSortBy.Location = new Point(1574, 52);
             cmbSortBy.Name = "cmbSortBy";
-            cmbSortBy.Size = new Size(195, 28);
+            cmbSortBy.Size = new Size(195, 31);
             cmbSortBy.TabIndex = 7;
             // 
             // label4
@@ -134,8 +134,8 @@
             // btnReset
             // 
             btnReset.BackColor = Color.Cyan;
-            btnReset.Font = new Font("Century Gothic", 9F, FontStyle.Bold);
-            btnReset.Location = new Point(541, 50);
+            btnReset.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
+            btnReset.Location = new Point(682, 47);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(106, 40);
             btnReset.TabIndex = 9;
@@ -147,7 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDarkDark;
+            BackColor = Color.Wheat;
             ClientSize = new Size(1829, 653);
             Controls.Add(btnReset);
             Controls.Add(label4);

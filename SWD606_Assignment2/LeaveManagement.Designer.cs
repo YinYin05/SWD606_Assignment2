@@ -56,7 +56,7 @@
             btnReset.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             btnReset.Location = new Point(607, 60);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(100, 30);
+            btnReset.Size = new Size(100, 40);
             btnReset.TabIndex = 15;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
@@ -68,7 +68,7 @@
             btnSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             btnSearch.Location = new Point(491, 60);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(100, 30);
+            btnSearch.Size = new Size(100, 40);
             btnSearch.TabIndex = 14;
             btnSearch.Text = "Go";
             btnSearch.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label3.Location = new Point(246, 61);
+            label3.Location = new Point(246, 64);
             label3.Name = "label3";
             label3.Size = new Size(47, 23);
             label3.TabIndex = 13;
@@ -86,24 +86,26 @@
             // 
             // txtSearch
             // 
+            txtSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             txtSearch.Location = new Point(106, 61);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(134, 27);
+            txtSearch.Size = new Size(134, 32);
             txtSearch.TabIndex = 12;
             // 
             // cmbSearch
             // 
+            cmbSearch.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
             cmbSearch.FormattingEnabled = true;
-            cmbSearch.Location = new Point(290, 61);
+            cmbSearch.Location = new Point(295, 61);
             cmbSearch.Name = "cmbSearch";
-            cmbSearch.Size = new Size(158, 28);
+            cmbSearch.Size = new Size(158, 31);
             cmbSearch.TabIndex = 11;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            label2.Location = new Point(20, 61);
+            label2.Location = new Point(11, 64);
             label2.Name = "label2";
             label2.Size = new Size(89, 23);
             label2.TabIndex = 10;
@@ -112,10 +114,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(550, 9);
+            label1.Font = new Font("Century Gothic", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(501, 3);
             label1.Name = "label1";
-            label1.Size = new Size(308, 27);
+            label1.Size = new Size(373, 34);
             label1.TabIndex = 16;
             label1.Text = "Employee Leave Balances";
             // 
@@ -135,7 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDarkDark;
+            BackColor = Color.Wheat;
             ClientSize = new Size(1351, 527);
             Controls.Add(btnLeaveApprovals);
             Controls.Add(label1);

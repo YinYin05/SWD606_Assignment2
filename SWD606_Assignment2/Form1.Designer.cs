@@ -90,7 +90,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.BackColor = Color.Wheat;
             panel1.Controls.Add(linkLabel1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtEmail);
