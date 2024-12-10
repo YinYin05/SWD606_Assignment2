@@ -38,6 +38,11 @@ namespace SWD606_Assignment2
                 smtp.EnableSsl = true;
                 // Send the email using the configured MailMessage and SmtpClient
                 smtp.Send(mail);
+                // Provide feedback to the user
+                MessageBox.Show("We will return back to you shortly.", "Email sent successfully to management!");
+
+                subjectBox.Text = string.Empty;
+                messageBox.Text = string.Empty;
             }
         }
 
