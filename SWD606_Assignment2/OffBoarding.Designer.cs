@@ -72,13 +72,14 @@
             // 
             // submitBTN
             // 
+            submitBTN.BackColor = Color.WhiteSmoke;
             submitBTN.Font = new Font("Lucida Fax", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             submitBTN.Location = new Point(426, 363);
             submitBTN.Name = "submitBTN";
             submitBTN.Size = new Size(147, 45);
             submitBTN.TabIndex = 25;
             submitBTN.Text = "Send Resignation";
-            submitBTN.UseVisualStyleBackColor = true;
+            submitBTN.UseVisualStyleBackColor = false;
             submitBTN.Click += submitBTN_Click;
             // 
             // label8

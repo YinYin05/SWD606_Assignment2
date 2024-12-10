@@ -37,7 +37,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(306, 9);
+            label2.Location = new Point(829, 387);
             label2.Name = "label2";
             label2.Size = new Size(175, 28);
             label2.TabIndex = 6;
@@ -48,7 +48,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 83);
+            dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(992, 349);

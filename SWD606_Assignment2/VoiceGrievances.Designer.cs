@@ -40,13 +40,14 @@
             // 
             // SendBTN
             // 
+            SendBTN.BackColor = Color.WhiteSmoke;
             SendBTN.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SendBTN.Location = new Point(490, 377);
             SendBTN.Name = "SendBTN";
             SendBTN.Size = new Size(95, 35);
             SendBTN.TabIndex = 0;
             SendBTN.Text = "Send Email";
-            SendBTN.UseVisualStyleBackColor = true;
+            SendBTN.UseVisualStyleBackColor = false;
             SendBTN.Click += SendBTN_Click;
             // 
             // label1
