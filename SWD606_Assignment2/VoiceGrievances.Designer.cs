@@ -67,7 +67,7 @@
             messageBox.Size = new Size(496, 113);
             messageBox.TabIndex = 3;
             messageBox.Tag = "";
-            messageBox.Text = "\r\n\r\n  ";
+            messageBox.Text = "\r\n\r\n\r\n  ";
             // 
             // subjectBox
             // 

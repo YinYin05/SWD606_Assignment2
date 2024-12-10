@@ -74,7 +74,9 @@ namespace SWD606_Assignment2
                     smtp.Send(mail);
 
                     // Provide feedback to the user
-                    MessageBox.Show("Email sent successfully to the predefined recipient!", "Success");
+                    MessageBox.Show("Email sent successfully to management!", "Success");
+
+                   
                 }
             }
             catch (Exception ex)
